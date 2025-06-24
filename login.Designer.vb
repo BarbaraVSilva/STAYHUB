@@ -41,7 +41,7 @@ Partial Class login
         Label5 = New Label()
         Label3 = New Label()
         Label4 = New Label()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        btn_entrar = New Guna.UI2.WinForms.Guna2Button()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2GradientPanel1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +68,7 @@ Partial Class login
         ' 
         txt_senha.Location = New Point(297, 197)
         txt_senha.Name = "txt_senha"
+        txt_senha.PasswordChar = "*"c
         txt_senha.Size = New Size(182, 23)
         txt_senha.TabIndex = 3
         ' 
@@ -145,24 +146,24 @@ Partial Class login
         Label4.TabIndex = 9
         Label4.Text = "Insira seus dados abaixo"
         ' 
-        ' Guna2Button1
+        ' btn_entrar
         ' 
-        Guna2Button1.BorderRadius = 10
-        Guna2Button1.CustomizableEdges = CustomizableEdges5
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.FillColor = Color.DarkBlue
-        Guna2Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(330, 262)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button1.Size = New Size(121, 38)
-        Guna2Button1.TabIndex = 10
-        Guna2Button1.Text = "Entrar"
-        Guna2Button1.Tile = True
+        btn_entrar.BorderRadius = 10
+        btn_entrar.CustomizableEdges = CustomizableEdges5
+        btn_entrar.DisabledState.BorderColor = Color.DarkGray
+        btn_entrar.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_entrar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btn_entrar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn_entrar.FillColor = Color.DarkBlue
+        btn_entrar.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_entrar.ForeColor = Color.White
+        btn_entrar.Location = New Point(330, 262)
+        btn_entrar.Name = "btn_entrar"
+        btn_entrar.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btn_entrar.Size = New Size(121, 38)
+        btn_entrar.TabIndex = 10
+        btn_entrar.Text = "Entrar"
+        btn_entrar.Tile = True
         ' 
         ' Guna2PictureBox2
         ' 
@@ -186,7 +187,7 @@ Partial Class login
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(538, 318)
         Controls.Add(Guna2PictureBox2)
-        Controls.Add(Guna2Button1)
+        Controls.Add(btn_entrar)
         Controls.Add(Label4)
         Controls.Add(Label3)
         Controls.Add(Guna2GradientPanel1)
@@ -198,7 +199,6 @@ Partial Class login
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "login"
         Text = "STAYHUB"
-        WindowState = FormWindowState.Maximized
         Guna2GradientPanel1.ResumeLayout(False)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -214,7 +214,7 @@ Partial Class login
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_entrar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
