@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class senha
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,25 +20,25 @@ Partial Class senha
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(senha))
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
-        btn_entrar = New Guna.UI2.WinForms.Guna2Button()
+        btn_redefinir = New Guna.UI2.WinForms.Guna2Button()
         Label4 = New Label()
         Label3 = New Label()
-        txt_usuario = New TextBox()
+        txt_email = New TextBox()
         Label1 = New Label()
-        TextBox1 = New TextBox()
         Label2 = New Label()
-        TextBox2 = New TextBox()
+        txt_conf = New TextBox()
         Label5 = New Label()
-        TextBox3 = New TextBox()
+        txt_novasenha = New TextBox()
         Label6 = New Label()
+        txt_cpf = New MaskedTextBox()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -46,36 +46,36 @@ Partial Class senha
         ' 
         Guna2PictureBox2.BackColor = Color.Transparent
         Guna2PictureBox2.BackgroundImageLayout = ImageLayout.None
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(170, -9)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox2.Size = New Size(130, 130)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox2.TabIndex = 20
         Guna2PictureBox2.TabStop = False
         Guna2PictureBox2.UseTransparentBackground = True
         ' 
-        ' btn_entrar
+        ' btn_redefinir
         ' 
-        btn_entrar.BorderRadius = 10
-        btn_entrar.CustomizableEdges = CustomizableEdges3
-        btn_entrar.DisabledState.BorderColor = Color.DarkGray
-        btn_entrar.DisabledState.CustomBorderColor = Color.DarkGray
-        btn_entrar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btn_entrar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btn_entrar.FillColor = Color.DarkBlue
-        btn_entrar.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btn_entrar.ForeColor = Color.White
-        btn_entrar.Location = New Point(171, 265)
-        btn_entrar.Name = "btn_entrar"
-        btn_entrar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        btn_entrar.Size = New Size(121, 38)
-        btn_entrar.TabIndex = 19
-        btn_entrar.Text = "Redefinir"
-        btn_entrar.Tile = True
+        btn_redefinir.BorderRadius = 10
+        btn_redefinir.CustomizableEdges = CustomizableEdges7
+        btn_redefinir.DisabledState.BorderColor = Color.DarkGray
+        btn_redefinir.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_redefinir.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btn_redefinir.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn_redefinir.FillColor = Color.DarkBlue
+        btn_redefinir.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_redefinir.ForeColor = Color.White
+        btn_redefinir.Location = New Point(171, 265)
+        btn_redefinir.Name = "btn_redefinir"
+        btn_redefinir.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btn_redefinir.Size = New Size(121, 38)
+        btn_redefinir.TabIndex = 19
+        btn_redefinir.Text = "Redefinir"
+        btn_redefinir.Tile = True
         ' 
         ' Label4
         ' 
@@ -97,12 +97,12 @@ Partial Class senha
         Label3.TabIndex = 17
         Label3.Text = "Redefinir senha"
         ' 
-        ' txt_usuario
+        ' txt_email
         ' 
-        txt_usuario.Location = New Point(42, 161)
-        txt_usuario.Name = "txt_usuario"
-        txt_usuario.Size = New Size(182, 23)
-        txt_usuario.TabIndex = 13
+        txt_email.Location = New Point(42, 161)
+        txt_email.Name = "txt_email"
+        txt_email.Size = New Size(182, 23)
+        txt_email.TabIndex = 13
         ' 
         ' Label1
         ' 
@@ -113,13 +113,6 @@ Partial Class senha
         Label1.TabIndex = 12
         Label1.Text = "E-mail"
         ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(42, 213)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(182, 23)
-        TextBox1.TabIndex = 22
-        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -129,12 +122,13 @@ Partial Class senha
         Label2.TabIndex = 21
         Label2.Text = "CPF"
         ' 
-        ' TextBox2
+        ' txt_conf
         ' 
-        TextBox2.Location = New Point(261, 213)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(182, 23)
-        TextBox2.TabIndex = 26
+        txt_conf.Location = New Point(261, 213)
+        txt_conf.Name = "txt_conf"
+        txt_conf.PasswordChar = "*"c
+        txt_conf.Size = New Size(182, 23)
+        txt_conf.TabIndex = 26
         ' 
         ' Label5
         ' 
@@ -145,12 +139,13 @@ Partial Class senha
         Label5.TabIndex = 25
         Label5.Text = "Confirmar senha"
         ' 
-        ' TextBox3
+        ' txt_novasenha
         ' 
-        TextBox3.Location = New Point(261, 161)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(182, 23)
-        TextBox3.TabIndex = 24
+        txt_novasenha.Location = New Point(261, 161)
+        txt_novasenha.Name = "txt_novasenha"
+        txt_novasenha.PasswordChar = "*"c
+        txt_novasenha.Size = New Size(182, 23)
+        txt_novasenha.TabIndex = 24
         ' 
         ' Label6
         ' 
@@ -161,22 +156,30 @@ Partial Class senha
         Label6.TabIndex = 23
         Label6.Text = "Nova senha"
         ' 
+        ' txt_cpf
+        ' 
+        txt_cpf.Location = New Point(42, 213)
+        txt_cpf.Mask = "999,999,999-99"
+        txt_cpf.Name = "txt_cpf"
+        txt_cpf.Size = New Size(182, 23)
+        txt_cpf.TabIndex = 27
+        ' 
         ' senha
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(485, 325)
-        Controls.Add(TextBox2)
+        Controls.Add(txt_cpf)
+        Controls.Add(txt_conf)
         Controls.Add(Label5)
-        Controls.Add(TextBox3)
+        Controls.Add(txt_novasenha)
         Controls.Add(Label6)
-        Controls.Add(TextBox1)
         Controls.Add(Label2)
         Controls.Add(Guna2PictureBox2)
-        Controls.Add(btn_entrar)
+        Controls.Add(btn_redefinir)
         Controls.Add(Label4)
         Controls.Add(Label3)
-        Controls.Add(txt_usuario)
+        Controls.Add(txt_email)
         Controls.Add(Label1)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "senha"
@@ -187,15 +190,15 @@ Partial Class senha
     End Sub
 
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents btn_entrar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_redefinir As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txt_usuario As TextBox
+    Friend WithEvents txt_email As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txt_conf As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txt_novasenha As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents txt_cpf As MaskedTextBox
 End Class

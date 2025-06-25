@@ -22,13 +22,13 @@ Partial Class usuarios
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(usuarios))
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(usuarios))
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
         user_nome = New TextBox()
         cmb_cargo = New ComboBox()
@@ -37,33 +37,33 @@ Partial Class usuarios
         Label3 = New Label()
         user_end = New TextBox()
         Label4 = New Label()
-        user_cpf = New TextBox()
         Label5 = New Label()
         user_comp = New TextBox()
         Label6 = New Label()
-        user_rg = New TextBox()
         Label7 = New Label()
         user_data = New TextBox()
         Label8 = New Label()
-        user_cel = New TextBox()
         Label9 = New Label()
         user_senha = New TextBox()
         Label11 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
+        user_cel = New MaskedTextBox()
+        user_rg = New MaskedTextBox()
+        user_cpf = New MaskedTextBox()
         Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         TabPage2 = New TabPage()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         dgv_dados = New DataGridView()
+        Nome = New DataGridViewTextBoxColumn()
+        CPF = New DataGridViewTextBoxColumn()
+        Cargo = New DataGridViewTextBoxColumn()
         ToolStrip1 = New ToolStrip()
         ToolStripButton2 = New ToolStripButton()
         txt_buscar = New ToolStripTextBox()
         ToolStripLabel1 = New ToolStripLabel()
         ToolStripLabel2 = New ToolStripLabel()
-        Nome = New DataGridViewTextBoxColumn()
-        CPF = New DataGridViewTextBoxColumn()
-        Cargo = New DataGridViewTextBoxColumn()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
@@ -137,13 +137,6 @@ Partial Class usuarios
         Label4.TabIndex = 8
         Label4.Text = "Endereço"
         ' 
-        ' user_cpf
-        ' 
-        user_cpf.Location = New Point(37, 226)
-        user_cpf.Name = "user_cpf"
-        user_cpf.Size = New Size(195, 23)
-        user_cpf.TabIndex = 7
-        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -168,13 +161,6 @@ Partial Class usuarios
         Label6.Size = New Size(84, 15)
         Label6.TabIndex = 12
         Label6.Text = "Complemento"
-        ' 
-        ' user_rg
-        ' 
-        user_rg.Location = New Point(289, 226)
-        user_rg.Name = "user_rg"
-        user_rg.Size = New Size(195, 23)
-        user_rg.TabIndex = 11
         ' 
         ' Label7
         ' 
@@ -201,13 +187,6 @@ Partial Class usuarios
         Label8.TabIndex = 14
         Label8.Text = "Data de Nascimento"
         ' 
-        ' user_cel
-        ' 
-        user_cel.Location = New Point(37, 340)
-        user_cel.Name = "user_cel"
-        user_cel.Size = New Size(195, 23)
-        user_cel.TabIndex = 19
-        ' 
         ' Label9
         ' 
         Label9.AutoSize = True
@@ -221,6 +200,7 @@ Partial Class usuarios
         ' 
         user_senha.Location = New Point(289, 340)
         user_senha.Name = "user_senha"
+        user_senha.PasswordChar = "*"c
         user_senha.Size = New Size(195, 23)
         user_senha.TabIndex = 21
         ' 
@@ -247,11 +227,13 @@ Partial Class usuarios
         ' 
         TabPage1.BackColor = Color.Transparent
         TabPage1.BackgroundImageLayout = ImageLayout.Stretch
+        TabPage1.Controls.Add(user_cel)
+        TabPage1.Controls.Add(user_rg)
+        TabPage1.Controls.Add(user_cpf)
         TabPage1.Controls.Add(Guna2Button2)
         TabPage1.Controls.Add(Guna2Button1)
         TabPage1.Controls.Add(Label1)
         TabPage1.Controls.Add(user_nome)
-        TabPage1.Controls.Add(user_cel)
         TabPage1.Controls.Add(user_senha)
         TabPage1.Controls.Add(Label9)
         TabPage1.Controls.Add(Label3)
@@ -262,8 +244,6 @@ Partial Class usuarios
         TabPage1.Controls.Add(user_comp)
         TabPage1.Controls.Add(Label5)
         TabPage1.Controls.Add(Label6)
-        TabPage1.Controls.Add(user_cpf)
-        TabPage1.Controls.Add(user_rg)
         TabPage1.Controls.Add(Label7)
         TabPage1.Controls.Add(Label2)
         TabPage1.Controls.Add(Label4)
@@ -276,9 +256,33 @@ Partial Class usuarios
         TabPage1.TabIndex = 0
         TabPage1.Text = "Cadastrar usuário"
         ' 
+        ' user_cel
+        ' 
+        user_cel.Location = New Point(37, 340)
+        user_cel.Mask = "(99)99999-9999"
+        user_cel.Name = "user_cel"
+        user_cel.Size = New Size(195, 23)
+        user_cel.TabIndex = 27
+        ' 
+        ' user_rg
+        ' 
+        user_rg.Location = New Point(289, 233)
+        user_rg.Mask = "99,999,999-99"
+        user_rg.Name = "user_rg"
+        user_rg.Size = New Size(195, 23)
+        user_rg.TabIndex = 26
+        ' 
+        ' user_cpf
+        ' 
+        user_cpf.Location = New Point(37, 233)
+        user_cpf.Mask = "999,999,999-99"
+        user_cpf.Name = "user_cpf"
+        user_cpf.Size = New Size(195, 23)
+        user_cpf.TabIndex = 25
+        ' 
         ' Guna2Button2
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges9
+        Guna2Button2.CustomizableEdges = CustomizableEdges7
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -290,14 +294,14 @@ Partial Class usuarios
         Guna2Button2.ImageSize = New Size(150, 150)
         Guna2Button2.Location = New Point(192, 6)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2Button2.Size = New Size(141, 88)
         Guna2Button2.TabIndex = 24
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BorderRadius = 10
-        Guna2Button1.CustomizableEdges = CustomizableEdges11
+        Guna2Button1.CustomizableEdges = CustomizableEdges9
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -307,7 +311,7 @@ Partial Class usuarios
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Location = New Point(162, 381)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2Button1.Size = New Size(199, 39)
         Guna2Button1.TabIndex = 22
         Guna2Button1.Text = "Cadastrar"
@@ -328,7 +332,7 @@ Partial Class usuarios
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges7
+        Guna2Button3.CustomizableEdges = CustomizableEdges11
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -340,7 +344,7 @@ Partial Class usuarios
         Guna2Button3.ImageSize = New Size(80, 80)
         Guna2Button3.Location = New Point(12, 4)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Button3.Size = New Size(71, 39)
         Guna2Button3.TabIndex = 25
         ' 
@@ -352,6 +356,21 @@ Partial Class usuarios
         dgv_dados.Name = "dgv_dados"
         dgv_dados.Size = New Size(532, 388)
         dgv_dados.TabIndex = 0
+        ' 
+        ' Nome
+        ' 
+        Nome.HeaderText = "Nome"
+        Nome.Name = "Nome"
+        ' 
+        ' CPF
+        ' 
+        CPF.HeaderText = "CPF"
+        CPF.Name = "CPF"
+        ' 
+        ' Cargo
+        ' 
+        Cargo.HeaderText = "Cargo"
+        Cargo.Name = "Cargo"
         ' 
         ' ToolStrip1
         ' 
@@ -400,21 +419,6 @@ Partial Class usuarios
         ToolStripLabel2.Size = New Size(0, 37)
         ToolStripLabel2.Text = "                                       "
         ' 
-        ' Nome
-        ' 
-        Nome.HeaderText = "Nome"
-        Nome.Name = "Nome"
-        ' 
-        ' CPF
-        ' 
-        CPF.HeaderText = "CPF"
-        CPF.Name = "CPF"
-        ' 
-        ' Cargo
-        ' 
-        Cargo.HeaderText = "Cargo"
-        Cargo.Name = "Cargo"
-        ' 
         ' usuarios
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -445,15 +449,12 @@ Partial Class usuarios
     Friend WithEvents Label3 As Label
     Friend WithEvents user_end As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents user_cpf As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents user_comp As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents user_rg As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents user_data As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents user_cel As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents user_tel As TextBox
     Friend WithEvents Label10 As Label
@@ -474,4 +475,7 @@ Partial Class usuarios
     Friend WithEvents Nome As DataGridViewTextBoxColumn
     Friend WithEvents CPF As DataGridViewTextBoxColumn
     Friend WithEvents Cargo As DataGridViewTextBoxColumn
+    Friend WithEvents user_cel As MaskedTextBox
+    Friend WithEvents user_rg As MaskedTextBox
+    Friend WithEvents user_cpf As MaskedTextBox
 End Class

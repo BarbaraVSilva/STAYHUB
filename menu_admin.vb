@@ -1,21 +1,21 @@
 ﻿Public Class menu_admin
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-
+    Private Sub btn_equipe_Click(sender As Object, e As EventArgs) Handles btn_equipe.Click
+        usuarios.Show()
     End Sub
 
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-
+    Private Sub btn_estoque_Click(sender As Object, e As EventArgs) Handles btn_estoque.Click
+        Estoque.Show()
     End Sub
 
-    Private Sub menu_admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub btn_financeiro_Click(sender As Object, e As EventArgs) Handles btn_financeiro.Click
+        financeiro.Show()
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
-
+    Private Sub btn_hospede_Click(sender As Object, e As EventArgs) Handles btn_hospede.Click
+        hospedes.Show()
     End Sub
 
-    Private Sub Guna2Button8_Click(sender As Object, e As EventArgs) Handles Guna2Button8.Click
-
+    Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
+        Me.Show()
     End Sub
 End Class

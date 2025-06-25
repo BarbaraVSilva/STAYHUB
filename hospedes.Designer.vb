@@ -447,9 +447,6 @@ Partial Class hospedes
 
     End Sub
 
-    Public Sub New()
-    End Sub
-
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
