@@ -1,6 +1,5 @@
-﻿Public Class Serviços
 ﻿Imports MySql.Data.MySqlClient
-
+﻿
 Public Class Serviços
     Dim conexao As MySqlConnection
     Dim servicoId As Integer = 0
@@ -104,28 +103,25 @@ Public Class Serviços
         txtName.Focus()
     End Sub
 
-    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
-        SalvarServico()
-    End Sub
-
     Private Sub SalvarServico()
         Try
             ' Validações
             If String.IsNullOrWhiteSpace(txtName.Text) Then
-                MsgBox("Por favor, informe o nome do serviço.", MsgBoxStyle.Warning)
+                MsgBox("Por favor, informe o nome do serviço.", MsgBoxStyle.Information)
                 txtName.Focus()
                 Return
             End If
 
             If String.IsNullOrWhiteSpace(txtPrice.Text) Then
-                MsgBox("Por favor, informe o preço do serviço.", MsgBoxStyle.Warning)
+                MsgBox("Por favor, informe o preço do serviço.", MsgBoxStyle.Information)
                 txtPrice.Focus()
                 Return
             End If
 
             Dim preco As Decimal
-            If Not Decimal.TryParse(txtPrice.Text.Replace(",", "."), preco) Then
-                MsgBox("Por favor, informe um preço válido.", MsgBoxStyle.Warning)
+            Dim textoPreco As String = txtPrice.Text.Replace(",", ".")
+            If Not Decimal.TryParse(textoPreco, Globalization.NumberStyles.Any, Globalization.CultureInfo.InvariantCulture, preco) Then
+                MsgBox("Por favor, informe um preço válido.", MsgBoxStyle.Critical)
                 txtPrice.Focus()
                 Return
             End If
@@ -213,7 +209,7 @@ Public Class Serviços
         End Try
     End Sub
 
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         BuscarServicos()
     End Sub
 
@@ -278,7 +274,25 @@ Public Class Serviços
         LimparCampos()
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub btn_salvar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
+        SalvarServico()
+    End Sub
 
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Dim cargo As Object = cmd.ExecuteScalar()
+        If cargo IsNot Nothing Then
+            Select Case cargo.ToString().ToLower()
+                    Case "administrador"
+                        Dim f As New menu_admin()
+                        f.Show()
+                    Case "recepcionista"
+                        Dim f As New menu_rec()
+                        f.Show()
+                    Case "auxiliar de serviço geral"
+                        Dim f As New menu_sg()
+                        f.Show()
+             End Select    
+             Me.Hide()
+        End If
     End Sub
 End Class

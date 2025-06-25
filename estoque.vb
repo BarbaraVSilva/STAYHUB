@@ -17,7 +17,7 @@
     End Sub
 
 
-    Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
+    Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
         Dim nome = user_nome.Text.Trim()
         Dim preco As Decimal
         Dim quantidade As Integer
@@ -56,7 +56,7 @@
                 produtos(editIndex).Categoria = categoria
             End If
             editIndex = -1
-            btn_entrar.Text = "Cadastrar"
+            btn_salvar.Text = "Cadastrar"
         End If
 
         LimparCampos()
@@ -112,7 +112,7 @@
             TextBox4.Text = p.Quantidade.ToString()
             TextBox1.Text = p.Descricao
             TextBox3.Text = p.Categoria
-            btn_entrar.Text = "Salvar"
+            btn_salvar.Text = "Salvar"
 
         ElseIf Guna2DataGridView1.Columns(e.ColumnIndex).Name = "Excluir" Then
 
@@ -125,8 +125,8 @@
     End Sub
 
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        LimparCampos()
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
+        LimparCampos
     End Sub
 
 
@@ -137,7 +137,7 @@
         TextBox1.Text = ""
         TextBox3.Text = ""
         editIndex = -1
-        btn_entrar.Text = "Cadastrar"
+        btn_salvar.Text = "Cadastrar"
         user_nome.Focus()
     End Sub
 End Class

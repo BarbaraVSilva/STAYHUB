@@ -18,9 +18,9 @@ Partial Class financeiro
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(financeiro))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         ENTRADAS = New TabControl()
         TabEntrada = New TabPage()
         btnLimparEntrada = New Button()
@@ -52,10 +52,13 @@ Partial Class financeiro
         lblPesquisaSaida = New Label()
         dtpPesquisaSaida = New DateTimePicker()
         btnPesquisarSaida = New Button()
-        ToolStrip1 = New ToolStrip()
-        ToolStripLabel2 = New ToolStripLabel()
-        ToolStripTextBox1 = New ToolStripTextBox()
+        Label3 = New Label()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
+        ToolStrip1 = New ToolStrip()
+        ToolStripButton2 = New ToolStripButton()
+        ToolStripTextBox1 = New ToolStripTextBox()
+        ToolStripLabel1 = New ToolStripLabel()
+        ToolStripLabel2 = New ToolStripLabel()
         ENTRADAS.SuspendLayout()
         TabEntrada.SuspendLayout()
         CType(dgvEntrada, ComponentModel.ISupportInitialize).BeginInit()
@@ -68,16 +71,17 @@ Partial Class financeiro
         ' 
         ENTRADAS.Controls.Add(TabEntrada)
         ENTRADAS.Controls.Add(TabSaida)
-        ENTRADAS.Location = New Point(15, 88)
+        ENTRADAS.Location = New Point(1, 49)
         ENTRADAS.Name = "ENTRADAS"
         ENTRADAS.SelectedIndex = 0
-        ENTRADAS.Size = New Size(601, 500)
+        ENTRADAS.Size = New Size(633, 555)
         ENTRADAS.TabIndex = 0
         ' 
         ' TabEntrada
         ' 
         TabEntrada.AccessibleDescription = ""
         TabEntrada.BackColor = Color.WhiteSmoke
+        TabEntrada.Controls.Add(cmbFormaPagamento)
         TabEntrada.Controls.Add(btnLimparEntrada)
         TabEntrada.Controls.Add(dgvEntrada)
         TabEntrada.Controls.Add(lblDataEntrada)
@@ -89,15 +93,14 @@ Partial Class financeiro
         TabEntrada.Controls.Add(lblValorEntrada)
         TabEntrada.Controls.Add(txtValorEntrada)
         TabEntrada.Controls.Add(lblFormaPagamento)
-        TabEntrada.Controls.Add(cmbFormaPagamento)
         TabEntrada.Controls.Add(btnSalvarEntrada)
         TabEntrada.Controls.Add(lblPesquisaEntrada)
         TabEntrada.Controls.Add(dtpPesquisaEntrada)
         TabEntrada.Controls.Add(btnPesquisarEntrada)
         TabEntrada.ForeColor = Color.Black
-        TabEntrada.Location = New Point(4, 29)
+        TabEntrada.Location = New Point(4, 24)
         TabEntrada.Name = "TabEntrada"
-        TabEntrada.Size = New Size(593, 467)
+        TabEntrada.Size = New Size(625, 527)
         TabEntrada.TabIndex = 0
         TabEntrada.Text = "ENTRADAS"
         ' 
@@ -117,7 +120,7 @@ Partial Class financeiro
         dgvEntrada.Location = New Point(10, 240)
         dgvEntrada.Name = "dgvEntrada"
         dgvEntrada.RowHeadersWidth = 51
-        dgvEntrada.Size = New Size(570, 200)
+        dgvEntrada.Size = New Size(607, 280)
         dgvEntrada.TabIndex = 0
         ' 
         ' lblDataEntrada
@@ -132,7 +135,7 @@ Partial Class financeiro
         ' 
         dtpDataEntrada.Location = New Point(130, 7)
         dtpDataEntrada.Name = "dtpDataEntrada"
-        dtpDataEntrada.Size = New Size(200, 27)
+        dtpDataEntrada.Size = New Size(200, 23)
         dtpDataEntrada.TabIndex = 2
         ' 
         ' lblHospede
@@ -147,7 +150,7 @@ Partial Class financeiro
         ' 
         txtHospede.Location = New Point(130, 40)
         txtHospede.Name = "txtHospede"
-        txtHospede.Size = New Size(200, 27)
+        txtHospede.Size = New Size(200, 23)
         txtHospede.TabIndex = 4
         ' 
         ' lblQuarto
@@ -162,7 +165,7 @@ Partial Class financeiro
         ' 
         txtQuarto.Location = New Point(130, 73)
         txtQuarto.Name = "txtQuarto"
-        txtQuarto.Size = New Size(200, 27)
+        txtQuarto.Size = New Size(200, 23)
         txtQuarto.TabIndex = 6
         ' 
         ' lblValorEntrada
@@ -177,22 +180,23 @@ Partial Class financeiro
         ' 
         txtValorEntrada.Location = New Point(130, 106)
         txtValorEntrada.Name = "txtValorEntrada"
-        txtValorEntrada.Size = New Size(200, 27)
+        txtValorEntrada.Size = New Size(200, 23)
         txtValorEntrada.TabIndex = 8
         ' 
         ' lblFormaPagamento
         ' 
-        lblFormaPagamento.Location = New Point(3, 153)
+        lblFormaPagamento.BackColor = Color.WhiteSmoke
+        lblFormaPagamento.Location = New Point(3, 150)
         lblFormaPagamento.Name = "lblFormaPagamento"
-        lblFormaPagamento.Size = New Size(155, 23)
+        lblFormaPagamento.Size = New Size(126, 23)
         lblFormaPagamento.TabIndex = 9
         lblFormaPagamento.Text = "Forma de Pagamento:"
         ' 
         ' cmbFormaPagamento
         ' 
-        cmbFormaPagamento.Location = New Point(183, 148)
+        cmbFormaPagamento.Location = New Point(130, 148)
         cmbFormaPagamento.Name = "cmbFormaPagamento"
-        cmbFormaPagamento.Size = New Size(147, 28)
+        cmbFormaPagamento.Size = New Size(200, 23)
         cmbFormaPagamento.TabIndex = 10
         ' 
         ' btnSalvarEntrada
@@ -207,7 +211,7 @@ Partial Class financeiro
         ' 
         ' lblPesquisaEntrada
         ' 
-        lblPesquisaEntrada.Location = New Point(10, 200)
+        lblPesquisaEntrada.Location = New Point(8, 200)
         lblPesquisaEntrada.Name = "lblPesquisaEntrada"
         lblPesquisaEntrada.Size = New Size(100, 23)
         lblPesquisaEntrada.TabIndex = 12
@@ -217,7 +221,7 @@ Partial Class financeiro
         ' 
         dtpPesquisaEntrada.Location = New Point(130, 200)
         dtpPesquisaEntrada.Name = "dtpPesquisaEntrada"
-        dtpPesquisaEntrada.Size = New Size(200, 27)
+        dtpPesquisaEntrada.Size = New Size(200, 23)
         dtpPesquisaEntrada.TabIndex = 13
         ' 
         ' btnPesquisarEntrada
@@ -244,9 +248,9 @@ Partial Class financeiro
         TabSaida.Controls.Add(lblPesquisaSaida)
         TabSaida.Controls.Add(dtpPesquisaSaida)
         TabSaida.Controls.Add(btnPesquisarSaida)
-        TabSaida.Location = New Point(4, 29)
+        TabSaida.Location = New Point(4, 24)
         TabSaida.Name = "TabSaida"
-        TabSaida.Size = New Size(593, 467)
+        TabSaida.Size = New Size(625, 527)
         TabSaida.TabIndex = 1
         TabSaida.Text = "SAÍDAS"
         ' 
@@ -281,7 +285,7 @@ Partial Class financeiro
         ' 
         dtpDataSaida.Location = New Point(116, 10)
         dtpDataSaida.Name = "dtpDataSaida"
-        dtpDataSaida.Size = New Size(200, 27)
+        dtpDataSaida.Size = New Size(200, 23)
         dtpDataSaida.TabIndex = 2
         ' 
         ' lblDescricaoSaida
@@ -296,7 +300,7 @@ Partial Class financeiro
         ' 
         txtDescricaoSaida.Location = New Point(116, 60)
         txtDescricaoSaida.Name = "txtDescricaoSaida"
-        txtDescricaoSaida.Size = New Size(200, 27)
+        txtDescricaoSaida.Size = New Size(200, 23)
         txtDescricaoSaida.TabIndex = 4
         ' 
         ' lblValorSaida
@@ -311,7 +315,7 @@ Partial Class financeiro
         ' 
         txtValorSaida.Location = New Point(116, 116)
         txtValorSaida.Name = "txtValorSaida"
-        txtValorSaida.Size = New Size(200, 27)
+        txtValorSaida.Size = New Size(200, 23)
         txtValorSaida.TabIndex = 6
         ' 
         ' btnSalvarSaida
@@ -334,7 +338,7 @@ Partial Class financeiro
         ' 
         dtpPesquisaSaida.Location = New Point(116, 167)
         dtpPesquisaSaida.Name = "dtpPesquisaSaida"
-        dtpPesquisaSaida.Size = New Size(200, 27)
+        dtpPesquisaSaida.Size = New Size(200, 23)
         dtpPesquisaSaida.TabIndex = 9
         ' 
         ' btnPesquisarSaida
@@ -345,43 +349,22 @@ Partial Class financeiro
         btnPesquisarSaida.TabIndex = 10
         btnPesquisarSaida.Text = "Pesquisar"
         ' 
-        ' ToolStrip1
+        ' Label3
         ' 
-        ToolStrip1.AutoSize = False
-        ToolStrip1.BackColor = Color.WhiteSmoke
-        ToolStrip1.Dock = DockStyle.None
-        ToolStrip1.ImageScalingSize = New Size(20, 20)
-        ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripLabel2, ToolStripTextBox1})
-        ToolStrip1.Location = New Point(149, 26)
-        ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(463, 59)
-        ToolStrip1.TabIndex = 28
-        ToolStrip1.Text = "ToolStrip1"
-        ' 
-        ' ToolStripLabel2
-        ' 
-        ToolStripLabel2.ActiveLinkColor = Color.Transparent
-        ToolStripLabel2.BackgroundImage = CType(resources.GetObject("ToolStripLabel2.BackgroundImage"), Image)
-        ToolStripLabel2.BackgroundImageLayout = ImageLayout.None
-        ToolStripLabel2.DisplayStyle = ToolStripItemDisplayStyle.Image
-        ToolStripLabel2.Name = "ToolStripLabel2"
-        ToolStripLabel2.Size = New Size(0, 56)
-        ToolStripLabel2.Text = "                                       "
-        ' 
-        ' ToolStripTextBox1
-        ' 
-        ToolStripTextBox1.BackColor = Color.WhiteSmoke
-        ToolStripTextBox1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ToolStripTextBox1.ForeColor = Color.DarkBlue
-        ToolStripTextBox1.MergeAction = MergeAction.MatchOnly
-        ToolStripTextBox1.Name = "ToolStripTextBox1"
-        ToolStripTextBox1.Size = New Size(100, 59)
-        ToolStripTextBox1.Text = "FINANCEIRO"
+        Label3.AutoSize = True
+        Label3.BackColor = Color.WhiteSmoke
+        Label3.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.DarkBlue
+        Label3.Location = New Point(130, 15)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(85, 17)
+        Label3.TabIndex = 36
+        Label3.Text = "FINANCEIRO"
         ' 
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges1
+        Guna2Button3.CustomizableEdges = CustomizableEdges3
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -391,16 +374,63 @@ Partial Class financeiro
         Guna2Button3.ForeColor = Color.Transparent
         Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), Image)
         Guna2Button3.ImageSize = New Size(80, 80)
-        Guna2Button3.Location = New Point(17, 26)
-        Guna2Button3.Margin = New Padding(3, 4, 3, 4)
+        Guna2Button3.Location = New Point(10, 3)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button3.Size = New Size(118, 52)
-        Guna2Button3.TabIndex = 29
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button3.Size = New Size(117, 39)
+        Guna2Button3.TabIndex = 35
+        ' 
+        ' ToolStrip1
+        ' 
+        ToolStrip1.Anchor = AnchorStyles.Left
+        ToolStrip1.AutoSize = False
+        ToolStrip1.BackColor = Color.WhiteSmoke
+        ToolStrip1.Dock = DockStyle.None
+        ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripButton2, ToolStripTextBox1, ToolStripLabel1, ToolStripLabel2})
+        ToolStrip1.Location = New Point(1, 0)
+        ToolStrip1.Name = "ToolStrip1"
+        ToolStrip1.Size = New Size(633, 46)
+        ToolStrip1.TabIndex = 34
+        ToolStrip1.Text = "ToolStrip1"
+        ' 
+        ' ToolStripButton2
+        ' 
+        ToolStripButton2.Alignment = ToolStripItemAlignment.Right
+        ToolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), Image)
+        ToolStripButton2.ImageTransparentColor = Color.Magenta
+        ToolStripButton2.Name = "ToolStripButton2"
+        ToolStripButton2.Size = New Size(23, 43)
+        ToolStripButton2.Text = "ToolStripButton2"
+        ' 
+        ' ToolStripTextBox1
+        ' 
+        ToolStripTextBox1.Alignment = ToolStripItemAlignment.Right
+        ToolStripTextBox1.Name = "ToolStripTextBox1"
+        ToolStripTextBox1.Size = New Size(100, 46)
+        ' 
+        ' ToolStripLabel1
+        ' 
+        ToolStripLabel1.Alignment = ToolStripItemAlignment.Right
+        ToolStripLabel1.Name = "ToolStripLabel1"
+        ToolStripLabel1.Size = New Size(42, 43)
+        ToolStripLabel1.Text = "Buscar"
+        ToolStripLabel1.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' ToolStripLabel2
+        ' 
+        ToolStripLabel2.ActiveLinkColor = Color.Transparent
+        ToolStripLabel2.BackgroundImage = CType(resources.GetObject("ToolStripLabel2.BackgroundImage"), Image)
+        ToolStripLabel2.BackgroundImageLayout = ImageLayout.None
+        ToolStripLabel2.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ToolStripLabel2.Name = "ToolStripLabel2"
+        ToolStripLabel2.Size = New Size(0, 43)
+        ToolStripLabel2.Text = "                                       "
         ' 
         ' financeiro
         ' 
         ClientSize = New Size(634, 605)
+        Controls.Add(Label3)
         Controls.Add(Guna2Button3)
         Controls.Add(ToolStrip1)
         Controls.Add(ENTRADAS)
@@ -418,6 +448,7 @@ Partial Class financeiro
         ToolStrip1.ResumeLayout(False)
         ToolStrip1.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     ' Declaração dos componentes
@@ -451,10 +482,13 @@ Partial Class financeiro
     Private WithEvents lblPesquisaSaida As Label
     Private WithEvents dtpPesquisaSaida As DateTimePicker
     Private WithEvents btnPesquisarSaida As Button
-    Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripLabel2 As ToolStripLabel
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
     Private WithEvents btnLimparEntrada As Button
     Private WithEvents btnLimparSaida As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
 End Class

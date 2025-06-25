@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\usuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:usuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\usuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:usuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\menu_admin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:menu_admin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\menu_admin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:menu_admin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,97 +13,22 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 290,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Module1.vb",
               "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\Module1.vb",
               "RelativeDocumentMoniker": "Module1.vb",
               "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\Module1.vb",
               "RelativeToolTip": "Module1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-06-25T01:08:19.886Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "usuarios.vb",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\usuarios.vb",
-              "RelativeDocumentMoniker": "usuarios.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\usuarios.vb",
-              "RelativeToolTip": "usuarios.vb",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAIwAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T02:35:46.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "usuarios.vb [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\usuarios.vb",
-              "RelativeDocumentMoniker": "usuarios.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\usuarios.vb [Projeto]",
-              "RelativeToolTip": "usuarios.vb [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T02:35:44.365Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "login.vb",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\login.vb",
-              "RelativeDocumentMoniker": "login.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\login.vb",
-              "RelativeToolTip": "login.vb",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T02:31:13.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "login.vb [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\login.vb",
-              "RelativeDocumentMoniker": "login.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\login.vb [Projeto]",
-              "RelativeToolTip": "login.vb [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T02:31:11.455Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "menu_admin.vb",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\menu_admin.vb",
-              "RelativeDocumentMoniker": "menu_admin.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\menu_admin.vb",
-              "RelativeToolTip": "menu_admin.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T02:12:57.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "menu_admin.vb [Projeto]",
-              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\menu_admin.vb",
-              "RelativeDocumentMoniker": "menu_admin.vb",
-              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\menu_admin.vb [Projeto]",
-              "RelativeToolTip": "menu_admin.vb [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-06-25T01:53:24.939Z",
-              "EditorCaption": " [Projeto]"
             }
           ]
         }

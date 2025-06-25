@@ -37,4 +37,12 @@ Public Class login
             End If
         End Using
     End Sub
+
+    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
+
+    End Sub
+
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
