@@ -4,6 +4,9 @@
     <Compile Update="estoque.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="financeiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="hospedes.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -16,10 +19,13 @@
     <Compile Update="reservas_detalhes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="financeiro.vb">
+    <Compile Update="senha.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="reservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="reservas_lista.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="menu_admin.vb">
@@ -29,9 +35,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="menu_sg.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="senha.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="serviços.vb">

@@ -22,9 +22,11 @@ Partial Class reservas_detalhes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(reservas_detalhes))
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
         txtfname = New TextBox()
         Label2 = New Label()
@@ -66,7 +68,7 @@ Partial Class reservas_detalhes
         txtGuestid = New TextBox()
         Label13 = New Label()
         lblTitle = New Label()
-        LBLUSERID = New Label()
+        Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         CType(dtgList, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(dtgAddons, ComponentModel.ISupportInitialize).BeginInit()
@@ -80,10 +82,10 @@ Partial Class reservas_detalhes
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label1.Location = New Point(18, 70)
-        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Location = New Point(21, 93)
+        Label1.Margin = New Padding(5, 0, 5, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(90, 13)
+        Label1.Size = New Size(117, 17)
         Label1.TabIndex = 0
         Label1.Text = "Primeiro nome:"
         ' 
@@ -91,10 +93,10 @@ Partial Class reservas_detalhes
         ' 
         txtfname.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtfname.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtfname.Location = New Point(109, 67)
-        txtfname.Margin = New Padding(4, 3, 4, 3)
+        txtfname.Location = New Point(125, 89)
+        txtfname.Margin = New Padding(5, 4, 5, 4)
         txtfname.Name = "txtfname"
-        txtfname.Size = New Size(356, 20)
+        txtfname.Size = New Size(406, 23)
         txtfname.TabIndex = 1
         ' 
         ' Label2
@@ -102,10 +104,10 @@ Partial Class reservas_detalhes
         Label2.AutoSize = True
         Label2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label2.Location = New Point(29, 134)
-        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Location = New Point(33, 179)
+        Label2.Margin = New Padding(5, 0, 5, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(65, 13)
+        Label2.Size = New Size(82, 17)
         Label2.TabIndex = 0
         Label2.Text = "Endereço:"
         ' 
@@ -113,10 +115,10 @@ Partial Class reservas_detalhes
         ' 
         txtAddress.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtAddress.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtAddress.Location = New Point(104, 130)
-        txtAddress.Margin = New Padding(4, 3, 4, 3)
+        txtAddress.Location = New Point(119, 173)
+        txtAddress.Margin = New Padding(5, 4, 5, 4)
         txtAddress.Name = "txtAddress"
-        txtAddress.Size = New Size(814, 20)
+        txtAddress.Size = New Size(930, 23)
         txtAddress.TabIndex = 7
         ' 
         ' Label3
@@ -124,10 +126,10 @@ Partial Class reservas_detalhes
         Label3.AutoSize = True
         Label3.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label3.Location = New Point(475, 70)
-        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Location = New Point(543, 93)
+        Label3.Margin = New Padding(5, 0, 5, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(74, 13)
+        Label3.Size = New Size(95, 17)
         Label3.TabIndex = 0
         Label3.Text = "Sobrenome:"
         ' 
@@ -135,10 +137,10 @@ Partial Class reservas_detalhes
         ' 
         txtlname.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtlname.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtlname.Location = New Point(561, 67)
-        txtlname.Margin = New Padding(4, 3, 4, 3)
+        txtlname.Location = New Point(641, 89)
+        txtlname.Margin = New Padding(5, 4, 5, 4)
         txtlname.Name = "txtlname"
-        txtlname.Size = New Size(356, 20)
+        txtlname.Size = New Size(406, 23)
         txtlname.TabIndex = 2
         ' 
         ' Label4
@@ -146,10 +148,10 @@ Partial Class reservas_detalhes
         Label4.AutoSize = True
         Label4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label4.Location = New Point(478, 104)
-        Label4.Margin = New Padding(4, 0, 4, 0)
+        Label4.Location = New Point(546, 139)
+        Label4.Margin = New Padding(5, 0, 5, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(61, 13)
+        Label4.Size = New Size(77, 17)
         Label4.TabIndex = 0
         Label4.Text = "Telefone:"
         ' 
@@ -157,10 +159,10 @@ Partial Class reservas_detalhes
         ' 
         txtContact.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtContact.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtContact.Location = New Point(561, 99)
-        txtContact.Margin = New Padding(4, 3, 4, 3)
+        txtContact.Location = New Point(641, 132)
+        txtContact.Margin = New Padding(5, 4, 5, 4)
         txtContact.Name = "txtContact"
-        txtContact.Size = New Size(356, 20)
+        txtContact.Size = New Size(406, 23)
         txtContact.TabIndex = 6
         ' 
         ' rdoMale
@@ -169,10 +171,10 @@ Partial Class reservas_detalhes
         rdoMale.Checked = True
         rdoMale.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         rdoMale.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        rdoMale.Location = New Point(110, 102)
-        rdoMale.Margin = New Padding(4, 3, 4, 3)
+        rdoMale.Location = New Point(126, 136)
+        rdoMale.Margin = New Padding(5, 4, 5, 4)
         rdoMale.Name = "rdoMale"
-        rdoMale.Size = New Size(52, 17)
+        rdoMale.Size = New Size(63, 21)
         rdoMale.TabIndex = 3
         rdoMale.TabStop = True
         rdoMale.Text = "Male"
@@ -183,10 +185,10 @@ Partial Class reservas_detalhes
         rdoFemale.AutoSize = True
         rdoFemale.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         rdoFemale.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        rdoFemale.Location = New Point(180, 102)
-        rdoFemale.Margin = New Padding(4, 3, 4, 3)
+        rdoFemale.Location = New Point(206, 136)
+        rdoFemale.Margin = New Padding(5, 4, 5, 4)
         rdoFemale.Name = "rdoFemale"
-        rdoFemale.Size = New Size(65, 17)
+        rdoFemale.Size = New Size(81, 21)
         rdoFemale.TabIndex = 4
         rdoFemale.Text = "Female"
         rdoFemale.UseVisualStyleBackColor = True
@@ -196,21 +198,21 @@ Partial Class reservas_detalhes
         Label5.AutoSize = True
         Label5.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label5.Location = New Point(56, 102)
-        Label5.Margin = New Padding(4, 0, 4, 0)
+        Label5.Location = New Point(64, 136)
+        Label5.Margin = New Padding(5, 0, 5, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(52, 13)
+        Label5.Size = New Size(67, 17)
         Label5.TabIndex = 0
         Label5.Text = "Genero:"
         ' 
         ' btnClose
         ' 
         btnClose.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnClose.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnClose.Location = New Point(864, 507)
-        btnClose.Margin = New Padding(4, 3, 4, 3)
+        btnClose.ForeColor = Color.Navy
+        btnClose.Location = New Point(987, 676)
+        btnClose.Margin = New Padding(5, 4, 5, 4)
         btnClose.Name = "btnClose"
-        btnClose.Size = New Size(88, 42)
+        btnClose.Size = New Size(101, 56)
         btnClose.TabIndex = 4
         btnClose.Text = "Cancelar"
         btnClose.UseVisualStyleBackColor = True
@@ -218,11 +220,11 @@ Partial Class reservas_detalhes
         ' btnNew
         ' 
         btnNew.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnNew.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnNew.Location = New Point(770, 507)
-        btnNew.Margin = New Padding(4, 3, 4, 3)
+        btnNew.ForeColor = Color.Navy
+        btnNew.Location = New Point(880, 676)
+        btnNew.Margin = New Padding(5, 4, 5, 4)
         btnNew.Name = "btnNew"
-        btnNew.Size = New Size(88, 42)
+        btnNew.Size = New Size(101, 56)
         btnNew.TabIndex = 4
         btnNew.Text = "Atualizar"
         btnNew.UseVisualStyleBackColor = True
@@ -230,11 +232,11 @@ Partial Class reservas_detalhes
         ' btnSave
         ' 
         btnSave.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnSave.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnSave.Location = New Point(676, 507)
-        btnSave.Margin = New Padding(4, 3, 4, 3)
+        btnSave.ForeColor = Color.Navy
+        btnSave.Location = New Point(773, 676)
+        btnSave.Margin = New Padding(5, 4, 5, 4)
         btnSave.Name = "btnSave"
-        btnSave.Size = New Size(88, 42)
+        btnSave.Size = New Size(101, 56)
         btnSave.TabIndex = 4
         btnSave.Text = "Check-out"
         btnSave.UseVisualStyleBackColor = True
@@ -250,12 +252,13 @@ Partial Class reservas_detalhes
         dtgList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dtgList.Dock = DockStyle.Fill
         dtgList.EditMode = DataGridViewEditMode.EditProgrammatically
-        dtgList.Location = New Point(0, 23)
-        dtgList.Margin = New Padding(4, 3, 4, 3)
+        dtgList.Location = New Point(0, 31)
+        dtgList.Margin = New Padding(5, 4, 5, 4)
         dtgList.MultiSelect = False
         dtgList.Name = "dtgList"
+        dtgList.RowHeadersWidth = 51
         dtgList.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dtgList.Size = New Size(938, 94)
+        dtgList.Size = New Size(1072, 125)
         dtgList.TabIndex = 0
         ' 
         ' Label7
@@ -263,10 +266,10 @@ Partial Class reservas_detalhes
         Label7.AutoSize = True
         Label7.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label7.Location = New Point(12, 43)
-        Label7.Margin = New Padding(4, 0, 4, 0)
+        Label7.Location = New Point(14, 57)
+        Label7.Margin = New Padding(5, 0, 5, 0)
         Label7.Name = "Label7"
-        Label7.Size = New Size(62, 13)
+        Label7.Size = New Size(78, 17)
         Label7.TabIndex = 0
         Label7.Text = "Subtotal :"
         ' 
@@ -276,10 +279,10 @@ Partial Class reservas_detalhes
         txtSubtotal.Enabled = False
         txtSubtotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtSubtotal.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtSubtotal.Location = New Point(115, 39)
-        txtSubtotal.Margin = New Padding(4, 3, 4, 3)
+        txtSubtotal.Location = New Point(131, 52)
+        txtSubtotal.Margin = New Padding(5, 4, 5, 4)
         txtSubtotal.Name = "txtSubtotal"
-        txtSubtotal.Size = New Size(225, 20)
+        txtSubtotal.Size = New Size(257, 23)
         txtSubtotal.TabIndex = 8
         ' 
         ' txtAddons
@@ -288,10 +291,10 @@ Partial Class reservas_detalhes
         txtAddons.Enabled = False
         txtAddons.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtAddons.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtAddons.Location = New Point(115, 70)
-        txtAddons.Margin = New Padding(4, 3, 4, 3)
+        txtAddons.Location = New Point(131, 93)
+        txtAddons.Margin = New Padding(5, 4, 5, 4)
         txtAddons.Name = "txtAddons"
-        txtAddons.Size = New Size(225, 20)
+        txtAddons.Size = New Size(257, 23)
         txtAddons.TabIndex = 9
         ' 
         ' txtTotal
@@ -300,10 +303,10 @@ Partial Class reservas_detalhes
         txtTotal.Enabled = False
         txtTotal.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtTotal.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtTotal.Location = New Point(115, 102)
-        txtTotal.Margin = New Padding(4, 3, 4, 3)
+        txtTotal.Location = New Point(131, 136)
+        txtTotal.Margin = New Padding(5, 4, 5, 4)
         txtTotal.Name = "txtTotal"
-        txtTotal.Size = New Size(225, 20)
+        txtTotal.Size = New Size(257, 23)
         txtTotal.TabIndex = 10
         ' 
         ' Label8
@@ -311,10 +314,10 @@ Partial Class reservas_detalhes
         Label8.AutoSize = True
         Label8.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label8.Location = New Point(6, 74)
-        Label8.Margin = New Padding(4, 0, 4, 0)
+        Label8.Location = New Point(7, 99)
+        Label8.Margin = New Padding(5, 0, 5, 0)
         Label8.Name = "Label8"
-        Label8.Size = New Size(98, 13)
+        Label8.Size = New Size(124, 17)
         Label8.TabIndex = 0
         Label8.Text = "Serviços extras:"
         ' 
@@ -323,10 +326,10 @@ Partial Class reservas_detalhes
         Label9.AutoSize = True
         Label9.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label9.Location = New Point(29, 105)
-        Label9.Margin = New Padding(4, 0, 4, 0)
+        Label9.Location = New Point(33, 140)
+        Label9.Margin = New Padding(5, 0, 5, 0)
         Label9.Name = "Label9"
-        Label9.Size = New Size(44, 13)
+        Label9.Size = New Size(55, 17)
         Label9.TabIndex = 0
         Label9.Text = "Total :"
         ' 
@@ -336,10 +339,10 @@ Partial Class reservas_detalhes
         Panel1.Controls.Add(btnAdd)
         Panel1.Controls.Add(btnRemove)
         Panel1.Controls.Add(Label10)
-        Panel1.Location = New Point(12, 351)
-        Panel1.Margin = New Padding(4, 3, 4, 3)
+        Panel1.Location = New Point(14, 468)
+        Panel1.Margin = New Padding(5, 4, 5, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(572, 197)
+        Panel1.Size = New Size(654, 263)
         Panel1.TabIndex = 3
         ' 
         ' dtgAddons
@@ -348,35 +351,38 @@ Partial Class reservas_detalhes
         dtgAddons.AllowUserToDeleteRows = False
         dtgAddons.AllowUserToResizeColumns = False
         dtgAddons.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
-        dtgAddons.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        dtgAddons.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         dtgAddons.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dtgAddons.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Control
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dtgAddons.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        dtgAddons.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         dtgAddons.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dtgAddons.Columns.AddRange(New DataGridViewColumn() {DTGCOLUMNID, Column1, Column3, Column2, Column4})
-        dtgAddons.Location = New Point(12, 32)
-        dtgAddons.Margin = New Padding(4, 3, 4, 3)
+        dtgAddons.Location = New Point(14, 43)
+        dtgAddons.Margin = New Padding(5, 4, 5, 4)
         dtgAddons.Name = "dtgAddons"
-        dtgAddons.Size = New Size(447, 155)
+        dtgAddons.RowHeadersWidth = 51
+        dtgAddons.Size = New Size(511, 207)
         dtgAddons.TabIndex = 9
         ' 
         ' DTGCOLUMNID
         ' 
         DTGCOLUMNID.HeaderText = "ID"
+        DTGCOLUMNID.MinimumWidth = 6
         DTGCOLUMNID.Name = "DTGCOLUMNID"
         ' 
         ' Column1
         ' 
         Column1.FillWeight = 73.85786F
         Column1.HeaderText = "Add-ons"
+        Column1.MinimumWidth = 6
         Column1.Name = "Column1"
         Column1.ReadOnly = True
         Column1.SortMode = DataGridViewColumnSortMode.NotSortable
@@ -385,6 +391,7 @@ Partial Class reservas_detalhes
         ' 
         Column3.FillWeight = 73.85786F
         Column3.HeaderText = "Price"
+        Column3.MinimumWidth = 6
         Column3.Name = "Column3"
         Column3.ReadOnly = True
         Column3.SortMode = DataGridViewColumnSortMode.NotSortable
@@ -393,22 +400,24 @@ Partial Class reservas_detalhes
         ' 
         Column2.FillWeight = 152.2843F
         Column2.HeaderText = "Quantity"
+        Column2.MinimumWidth = 6
         Column2.Name = "Column2"
         Column2.SortMode = DataGridViewColumnSortMode.NotSortable
         ' 
         ' Column4
         ' 
         Column4.HeaderText = "Subtot"
+        Column4.MinimumWidth = 6
         Column4.Name = "Column4"
         ' 
         ' btnAdd
         ' 
         btnAdd.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnAdd.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnAdd.Location = New Point(468, 35)
-        btnAdd.Margin = New Padding(4, 3, 4, 3)
+        btnAdd.ForeColor = Color.Navy
+        btnAdd.Location = New Point(535, 47)
+        btnAdd.Margin = New Padding(5, 4, 5, 4)
         btnAdd.Name = "btnAdd"
-        btnAdd.Size = New Size(99, 36)
+        btnAdd.Size = New Size(113, 48)
         btnAdd.TabIndex = 8
         btnAdd.Text = "Adicionar"
         btnAdd.UseVisualStyleBackColor = True
@@ -416,26 +425,25 @@ Partial Class reservas_detalhes
         ' btnRemove
         ' 
         btnRemove.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnRemove.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnRemove.Location = New Point(468, 73)
-        btnRemove.Margin = New Padding(4, 3, 4, 3)
+        btnRemove.ForeColor = Color.Navy
+        btnRemove.Location = New Point(535, 97)
+        btnRemove.Margin = New Padding(5, 4, 5, 4)
         btnRemove.Name = "btnRemove"
-        btnRemove.Size = New Size(99, 36)
+        btnRemove.Size = New Size(113, 48)
         btnRemove.TabIndex = 8
         btnRemove.Text = "Remover"
         btnRemove.UseVisualStyleBackColor = True
         ' 
         ' Label10
         ' 
-        Label10.BackColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        Label10.BackColor = Color.Navy
         Label10.Dock = DockStyle.Top
         Label10.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.White
-        Label10.Image = CType(resources.GetObject("Label10.Image"), Image)
         Label10.Location = New Point(0, 0)
-        Label10.Margin = New Padding(4, 0, 4, 0)
+        Label10.Margin = New Padding(5, 0, 5, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(572, 23)
+        Label10.Size = New Size(654, 31)
         Label10.TabIndex = 6
         Label10.Text = "Serviços extras"
         ' 
@@ -443,23 +451,22 @@ Partial Class reservas_detalhes
         ' 
         Panel2.Controls.Add(dtgList)
         Panel2.Controls.Add(Label11)
-        Panel2.Location = New Point(12, 231)
-        Panel2.Margin = New Padding(4, 3, 4, 3)
+        Panel2.Location = New Point(14, 308)
+        Panel2.Margin = New Padding(5, 4, 5, 4)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(938, 117)
+        Panel2.Size = New Size(1072, 156)
         Panel2.TabIndex = 2
         ' 
         ' Label11
         ' 
-        Label11.BackColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        Label11.BackColor = Color.Navy
         Label11.Dock = DockStyle.Top
         Label11.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.White
-        Label11.Image = CType(resources.GetObject("Label11.Image"), Image)
         Label11.Location = New Point(0, 0)
-        Label11.Margin = New Padding(4, 0, 4, 0)
+        Label11.Margin = New Padding(5, 0, 5, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(938, 23)
+        Label11.Size = New Size(1072, 31)
         Label11.TabIndex = 6
         Label11.Text = "Detalhes do quarto"
         ' 
@@ -473,23 +480,22 @@ Partial Class reservas_detalhes
         Panel3.Controls.Add(Label7)
         Panel3.Controls.Add(Label9)
         Panel3.Controls.Add(Label8)
-        Panel3.Location = New Point(589, 350)
-        Panel3.Margin = New Padding(4, 3, 4, 3)
+        Panel3.Location = New Point(673, 467)
+        Panel3.Margin = New Padding(5, 4, 5, 4)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(362, 150)
+        Panel3.Size = New Size(413, 199)
         Panel3.TabIndex = 4
         ' 
         ' Label12
         ' 
-        Label12.BackColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        Label12.BackColor = Color.Navy
         Label12.Dock = DockStyle.Top
         Label12.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label12.ForeColor = Color.White
-        Label12.Image = CType(resources.GetObject("Label12.Image"), Image)
         Label12.Location = New Point(0, 0)
-        Label12.Margin = New Padding(4, 0, 4, 0)
+        Label12.Margin = New Padding(5, 0, 5, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(360, 23)
+        Label12.Size = New Size(411, 31)
         Label12.TabIndex = 6
         Label12.Text = "Resumo"
         ' 
@@ -511,20 +517,20 @@ Partial Class reservas_detalhes
         Panel4.Controls.Add(Label4)
         Panel4.Controls.Add(txtContact)
         Panel4.Controls.Add(Label2)
-        Panel4.Location = New Point(12, 52)
-        Panel4.Margin = New Padding(4, 3, 4, 3)
+        Panel4.Location = New Point(14, 69)
+        Panel4.Margin = New Padding(5, 4, 5, 4)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(938, 172)
+        Panel4.Size = New Size(1072, 229)
         Panel4.TabIndex = 1
         ' 
         ' btnFind
         ' 
         btnFind.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnFind.ForeColor = Color.FromArgb(CByte(128), CByte(64), CByte(64))
-        btnFind.Location = New Point(301, 35)
-        btnFind.Margin = New Padding(4, 3, 4, 3)
+        btnFind.ForeColor = Color.Navy
+        btnFind.Location = New Point(344, 47)
+        btnFind.Margin = New Padding(5, 4, 5, 4)
         btnFind.Name = "btnFind"
-        btnFind.Size = New Size(57, 27)
+        btnFind.Size = New Size(65, 36)
         btnFind.TabIndex = 10
         btnFind.Text = "Buscar"
         btnFind.UseVisualStyleBackColor = True
@@ -534,10 +540,10 @@ Partial Class reservas_detalhes
         Label15.AutoSize = True
         Label15.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label15.Location = New Point(26, 38)
-        Label15.Margin = New Padding(4, 0, 4, 0)
+        Label15.Location = New Point(30, 51)
+        Label15.Margin = New Padding(5, 0, 5, 0)
         Label15.Name = "Label15"
-        Label15.Size = New Size(78, 13)
+        Label15.Size = New Size(97, 17)
         Label15.TabIndex = 9
         Label15.Text = "Hospede ID:"
         ' 
@@ -546,57 +552,66 @@ Partial Class reservas_detalhes
         txtGuestid.Enabled = False
         txtGuestid.Font = New Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         txtGuestid.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        txtGuestid.Location = New Point(104, 37)
-        txtGuestid.Margin = New Padding(4, 3, 4, 3)
+        txtGuestid.Location = New Point(119, 49)
+        txtGuestid.Margin = New Padding(5, 4, 5, 4)
         txtGuestid.Name = "txtGuestid"
-        txtGuestid.Size = New Size(190, 20)
+        txtGuestid.Size = New Size(217, 23)
         txtGuestid.TabIndex = 8
         ' 
         ' Label13
         ' 
-        Label13.BackColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        Label13.BackColor = Color.DarkBlue
         Label13.Dock = DockStyle.Top
         Label13.Font = New Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.White
-        Label13.Image = CType(resources.GetObject("Label13.Image"), Image)
         Label13.Location = New Point(0, 0)
-        Label13.Margin = New Padding(4, 0, 4, 0)
+        Label13.Margin = New Padding(5, 0, 5, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(936, 23)
+        Label13.Size = New Size(1070, 31)
         Label13.TabIndex = 6
         Label13.Text = "Hospede"
         ' 
         ' lblTitle
         ' 
-        lblTitle.BackColor = Color.White
-        lblTitle.Dock = DockStyle.Top
+        lblTitle.Anchor = AnchorStyles.None
+        lblTitle.BackColor = Color.WhiteSmoke
         lblTitle.Font = New Font("Microsoft Sans Serif", 15F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.ForeColor = Color.Black
-        lblTitle.Location = New Point(0, 0)
-        lblTitle.Margin = New Padding(4, 0, 4, 0)
+        lblTitle.ForeColor = Color.DarkBlue
+        lblTitle.Location = New Point(193, 4)
+        lblTitle.Margin = New Padding(5, 0, 5, 0)
         lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(962, 42)
+        lblTitle.Size = New Size(698, 56)
         lblTitle.TabIndex = 9
         lblTitle.Text = "Detalhes da reserva"
         lblTitle.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' LBLUSERID
+        ' Guna2Button3
         ' 
-        LBLUSERID.AutoSize = True
-        LBLUSERID.Location = New Point(912, 10)
-        LBLUSERID.Margin = New Padding(4, 0, 4, 0)
-        LBLUSERID.Name = "LBLUSERID"
-        LBLUSERID.Size = New Size(13, 15)
-        LBLUSERID.TabIndex = 10
-        LBLUSERID.Text = "1"
-        LBLUSERID.Visible = False
+        Guna2Button3.BackColor = Color.WhiteSmoke
+        Guna2Button3.CustomizableEdges = CustomizableEdges3
+        Guna2Button3.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button3.FillColor = Color.WhiteSmoke
+        Guna2Button3.Font = New Font("Segoe UI", 9F)
+        Guna2Button3.ForeColor = Color.Transparent
+        Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), Image)
+        Guna2Button3.ImageSize = New Size(80, 80)
+        Guna2Button3.Location = New Point(15, 4)
+        Guna2Button3.Margin = New Padding(3, 4, 3, 4)
+        Guna2Button3.Name = "Guna2Button3"
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button3.Size = New Size(170, 52)
+        Guna2Button3.TabIndex = 30
         ' 
         ' reservas_detalhes
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.White
-        ClientSize = New Size(962, 552)
+        BackColor = Color.WhiteSmoke
+        ClientSize = New Size(1099, 736)
+        Controls.Add(Guna2Button3)
         Controls.Add(lblTitle)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
@@ -605,10 +620,9 @@ Partial Class reservas_detalhes
         Controls.Add(btnSave)
         Controls.Add(btnNew)
         Controls.Add(btnClose)
-        Controls.Add(LBLUSERID)
         FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Margin = New Padding(4, 3, 4, 3)
+        Margin = New Padding(5, 4, 5, 4)
         MaximizeBox = False
         Name = "reservas_detalhes"
         StartPosition = FormStartPosition.CenterScreen
@@ -622,7 +636,6 @@ Partial Class reservas_detalhes
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -658,7 +671,6 @@ Partial Class reservas_detalhes
     Friend WithEvents btnAdd As System.Windows.Forms.Button
     Friend WithEvents btnRemove As System.Windows.Forms.Button
     Friend WithEvents dtgAddons As System.Windows.Forms.DataGridView
-    Friend WithEvents LBLUSERID As System.Windows.Forms.Label
     Friend WithEvents DTGCOLUMNID As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -667,4 +679,5 @@ Partial Class reservas_detalhes
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents txtGuestid As System.Windows.Forms.TextBox
     Friend WithEvents btnFind As System.Windows.Forms.Button
+    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
 End Class

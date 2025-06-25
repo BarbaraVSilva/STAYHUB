@@ -82,7 +82,6 @@ Public Class usuarios
     Private Sub CarregarCargos()
         With Me.cmb_cargo.Items
             .Clear()
-            .Add("Administrador")
             .Add("Recepcionista")
             .Add("Auxiliar de Serviços Gerais")
         End With
@@ -122,9 +121,5 @@ Public Class usuarios
                 End If
             End If
         End If
-    End Sub
-
-    Private Sub cmb_cargo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_cargo.SelectedIndexChanged
-
     End Sub
 End Class
