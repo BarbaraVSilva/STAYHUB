@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\estoque.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:estoque.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|c:\\users\\barbara\\desktop\\stayhub\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{8B9B9F7C-1C13-4C2C-9A86-ED43D31BE4EF}|StayHub.vbproj|solutionrelative:module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
@@ -14,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 290,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Module1.vb",
               "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\Module1.vb",
               "RelativeDocumentMoniker": "Module1.vb",
@@ -29,6 +33,22 @@
               "WhenOpened": "2025-06-25T01:08:19.886Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "estoque.vb [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\estoque.vb",
+              "RelativeDocumentMoniker": "estoque.vb",
+              "ToolTip": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\estoque.vb [Projeto]",
+              "RelativeToolTip": "estoque.vb [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-06-25T13:40:37.05Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

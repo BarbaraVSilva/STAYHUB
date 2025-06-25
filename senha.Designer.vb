@@ -22,23 +22,23 @@ Partial Class senha
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(senha))
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         btn_entrar = New Guna.UI2.WinForms.Guna2Button()
         Label4 = New Label()
         Label3 = New Label()
         txt_usuario = New TextBox()
         Label1 = New Label()
-        TextBox1 = New TextBox()
         Label2 = New Label()
         TextBox2 = New TextBox()
         Label5 = New Label()
         TextBox3 = New TextBox()
         Label6 = New Label()
+        MaskedTextBox1 = New MaskedTextBox()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -46,12 +46,12 @@ Partial Class senha
         ' 
         Guna2PictureBox2.BackColor = Color.Transparent
         Guna2PictureBox2.BackgroundImageLayout = ImageLayout.None
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox2.Image = CType(resources.GetObject("Guna2PictureBox2.Image"), Image)
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(170, -9)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2PictureBox2.Size = New Size(130, 130)
         Guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox2.TabIndex = 20
@@ -61,7 +61,7 @@ Partial Class senha
         ' btn_entrar
         ' 
         btn_entrar.BorderRadius = 10
-        btn_entrar.CustomizableEdges = CustomizableEdges3
+        btn_entrar.CustomizableEdges = CustomizableEdges11
         btn_entrar.DisabledState.BorderColor = Color.DarkGray
         btn_entrar.DisabledState.CustomBorderColor = Color.DarkGray
         btn_entrar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -71,7 +71,7 @@ Partial Class senha
         btn_entrar.ForeColor = Color.White
         btn_entrar.Location = New Point(171, 265)
         btn_entrar.Name = "btn_entrar"
-        btn_entrar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btn_entrar.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         btn_entrar.Size = New Size(121, 38)
         btn_entrar.TabIndex = 19
         btn_entrar.Text = "Redefinir"
@@ -113,13 +113,6 @@ Partial Class senha
         Label1.TabIndex = 12
         Label1.Text = "E-mail"
         ' 
-        ' TextBox1
-        ' 
-        TextBox1.Location = New Point(42, 213)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(182, 23)
-        TextBox1.TabIndex = 22
-        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -133,6 +126,7 @@ Partial Class senha
         ' 
         TextBox2.Location = New Point(261, 213)
         TextBox2.Name = "TextBox2"
+        TextBox2.PasswordChar = "*"c
         TextBox2.Size = New Size(182, 23)
         TextBox2.TabIndex = 26
         ' 
@@ -149,6 +143,7 @@ Partial Class senha
         ' 
         TextBox3.Location = New Point(261, 161)
         TextBox3.Name = "TextBox3"
+        TextBox3.PasswordChar = "*"c
         TextBox3.Size = New Size(182, 23)
         TextBox3.TabIndex = 24
         ' 
@@ -161,16 +156,24 @@ Partial Class senha
         Label6.TabIndex = 23
         Label6.Text = "Nova senha"
         ' 
+        ' MaskedTextBox1
+        ' 
+        MaskedTextBox1.Location = New Point(44, 216)
+        MaskedTextBox1.Mask = "999,999,999-99"
+        MaskedTextBox1.Name = "MaskedTextBox1"
+        MaskedTextBox1.Size = New Size(181, 23)
+        MaskedTextBox1.TabIndex = 27
+        ' 
         ' senha
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(485, 325)
+        Controls.Add(MaskedTextBox1)
         Controls.Add(TextBox2)
         Controls.Add(Label5)
         Controls.Add(TextBox3)
         Controls.Add(Label6)
-        Controls.Add(TextBox1)
         Controls.Add(Label2)
         Controls.Add(Guna2PictureBox2)
         Controls.Add(btn_entrar)
@@ -192,10 +195,10 @@ Partial Class senha
     Friend WithEvents Label3 As Label
     Friend WithEvents txt_usuario As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
 End Class

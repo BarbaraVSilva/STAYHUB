@@ -22,13 +22,13 @@ Partial Class hospedes
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(hospedes))
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
         txt_nome = New TextBox()
         txt_email = New TextBox()
@@ -216,7 +216,7 @@ Partial Class hospedes
         ' 
         cad_hosp.Controls.Add(Novo_hospede)
         cad_hosp.Controls.Add(TabPage2)
-        cad_hosp.Location = New Point(2, 1)
+        cad_hosp.Location = New Point(0, 52)
         cad_hosp.Name = "cad_hosp"
         cad_hosp.SelectedIndex = 0
         cad_hosp.Size = New Size(690, 409)
@@ -256,7 +256,7 @@ Partial Class hospedes
         ' 
         ' Guna2Button2
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges7
+        Guna2Button2.CustomizableEdges = CustomizableEdges1
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -268,14 +268,14 @@ Partial Class hospedes
         Guna2Button2.ImageSize = New Size(150, 150)
         Guna2Button2.Location = New Point(262, 15)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button2.Size = New Size(161, 78)
         Guna2Button2.TabIndex = 24
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BorderRadius = 10
-        Guna2Button1.CustomizableEdges = CustomizableEdges9
+        Guna2Button1.CustomizableEdges = CustomizableEdges3
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -285,7 +285,7 @@ Partial Class hospedes
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Location = New Point(464, 318)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button1.Size = New Size(168, 39)
         Guna2Button1.TabIndex = 26
         Guna2Button1.Text = "Cadastrar"
@@ -324,7 +324,7 @@ Partial Class hospedes
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges11
+        Guna2Button3.CustomizableEdges = CustomizableEdges5
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -336,7 +336,7 @@ Partial Class hospedes
         Guna2Button3.ImageSize = New Size(80, 80)
         Guna2Button3.Location = New Point(9, 1)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Button3.Size = New Size(152, 39)
         Guna2Button3.TabIndex = 27
         ' 
@@ -399,7 +399,7 @@ Partial Class hospedes
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(690, 409)
+        ClientSize = New Size(690, 459)
         Controls.Add(cad_hosp)
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "hospedes"
