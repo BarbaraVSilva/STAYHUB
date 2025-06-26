@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HWvzeV48inU=",
+  "dgSpecHash": "JP/sOfDbYak=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\StayHub.vbproj",
+  "projectFilePath": "C:\\Users\\Barbara\\Downloads\\STAYHUB\\STAYHUB\\StayHub.vbproj",
   "expectedPackageFiles": [
     "C:\\Users\\Barbara\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Barbara\\.nuget\\packages\\bunifu.licensing\\6.1.1\\bunifu.licensing.6.1.1.nupkg.sha512",
@@ -90,9 +90,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "O pacote 'Bunifu.UI.WinForms.1.5.3 2.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net8.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
-      "projectPath": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\StayHub.vbproj",
+      "projectPath": "C:\\Users\\Barbara\\Downloads\\STAYHUB\\STAYHUB\\StayHub.vbproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Barbara\\Desktop\\STAYHUB\\StayHub.vbproj",
+      "filePath": "C:\\Users\\Barbara\\Downloads\\STAYHUB\\STAYHUB\\StayHub.vbproj",
       "libraryId": "Bunifu.UI.WinForms.1.5.3",
       "targetGraphs": [
         "net8.0-windows7.0"

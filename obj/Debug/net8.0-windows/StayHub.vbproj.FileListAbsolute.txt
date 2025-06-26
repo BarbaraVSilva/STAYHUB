@@ -59,3 +59,4 @@ C:\Users\Barbara\Desktop\STAYHUB\obj\Debug\net8.0-windows\StayHub.pdb
 C:\Users\Barbara\Desktop\STAYHUB\obj\Debug\net8.0-windows\StayHub.genruntimeconfig.cache
 C:\Users\Barbara\Desktop\STAYHUB\obj\Debug\net8.0-windows\ref\StayHub.dll
 C:\Users\Barbara\Desktop\STAYHUB\obj\Debug\net8.0-windows\StayHub.Resources.resources
+C:\Users\Barbara\source\repos\BarbaraVSilva\STAYHUB\obj\Debug\net8.0-windows\StayHub.vbproj.AssemblyReference.cache
