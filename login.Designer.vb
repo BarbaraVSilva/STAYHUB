@@ -31,6 +31,8 @@ Partial Class login
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
         txt_usuario = New TextBox()
         txt_senha = New TextBox()
@@ -43,6 +45,7 @@ Partial Class login
         Label4 = New Label()
         btn_entrar = New Guna.UI2.WinForms.Guna2Button()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
+        btn_visualizar = New Guna.UI2.WinForms.Guna2Button()
         Guna2GradientPanel1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +74,7 @@ Partial Class login
         txt_senha.PasswordChar = "*"c
         txt_senha.Size = New Size(182, 23)
         txt_senha.TabIndex = 3
+        txt_senha.UseSystemPasswordChar = True
         ' 
         ' Label2
         ' 
@@ -181,11 +185,30 @@ Partial Class login
         Guna2PictureBox2.TabStop = False
         Guna2PictureBox2.UseTransparentBackground = True
         ' 
+        ' btn_visualizar
+        ' 
+        btn_visualizar.CustomizableEdges = CustomizableEdges9
+        btn_visualizar.DisabledState.BorderColor = Color.DarkGray
+        btn_visualizar.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_visualizar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btn_visualizar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn_visualizar.FillColor = Color.White
+        btn_visualizar.Font = New Font("Segoe UI", 9F)
+        btn_visualizar.ForeColor = Color.White
+        btn_visualizar.Image = CType(resources.GetObject("btn_visualizar.Image"), Image)
+        btn_visualizar.ImageSize = New Size(17, 17)
+        btn_visualizar.Location = New Point(450, 200)
+        btn_visualizar.Name = "btn_visualizar"
+        btn_visualizar.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btn_visualizar.Size = New Size(27, 19)
+        btn_visualizar.TabIndex = 12
+        ' 
         ' login
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(538, 318)
+        Controls.Add(btn_visualizar)
         Controls.Add(Guna2PictureBox2)
         Controls.Add(btn_entrar)
         Controls.Add(Label4)
@@ -218,5 +241,6 @@ Partial Class login
     Friend WithEvents Label5 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btn_visualizar As Guna.UI2.WinForms.Guna2Button
 
 End Class

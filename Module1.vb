@@ -3,6 +3,7 @@
 Module Module1
     Public connectionString As String = "Server=localhost;Port=3307;Database=stayhub;Uid=root;Pwd=usbw;"
     Public db As MySqlConnection
+    Public nomeUsuarioLogado As String
 
     Sub ConectaBanco()
         Try

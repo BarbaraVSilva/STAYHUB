@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("StayHub"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Release"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2514d5ad0ac75fab750dfe10323be46a80c352b9"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d0d74e60f803419a537243319c099e98297e6d2"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("StayHub"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("StayHub"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

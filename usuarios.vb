@@ -53,23 +53,40 @@ Public Class usuarios
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         Try
-            Dim sqlBusca As String = $"SELECT * FROM usuarios WHERE cpf = '{user_cpf.Text}'"
+            If user_cpf.Text = "" Or user_nome.Text = "" Or user_email.Text = "" Or user_senha.Text = "" Then
+                MsgBox("Preencha os campos obrigatórios: Nome, CPF, E-mail e Senha.", MsgBoxStyle.Exclamation)
+                Return
+            End If
+
+            Dim sqlBusca As String = "SELECT * FROM usuarios WHERE cpf = @cpf"
             Dim comando As New MySqlCommand(sqlBusca, db)
+            comando.Parameters.AddWithValue("@cpf", user_cpf.Text)
             Dim leitor As MySqlDataReader = comando.ExecuteReader()
 
             If leitor.HasRows Then
                 leitor.Close()
-                Dim sqlAtualiza As String = $"UPDATE usuarios SET nome='{user_nome.Text}', data_nascimento='{user_data.Text}' WHERE cpf='{user_cpf.Text}'"
+                Dim sqlAtualiza As String = "UPDATE usuarios SET nome=@nome, data_nascimento=@data, email=@email, rg=@rg, endereco=@endereco, complemento=@complemento, celular=@celular, cargo=@cargo, senha=@senha WHERE cpf=@cpf"
                 comando = New MySqlCommand(sqlAtualiza, db)
-                comando.ExecuteNonQuery()
-                MsgBox("Dados alterados com sucesso!", MsgBoxStyle.Information)
             Else
                 leitor.Close()
-                Dim sqlInsere As String = $"INSERT INTO usuarios (cpf, nome, data_nascimento) VALUES ('{user_cpf.Text}', '{user_nome.Text}', '{user_data.Text}')"
+                Dim sqlInsere As String = "INSERT INTO usuarios (cpf, nome, data_nascimento, email, rg, endereco, complemento, celular, cargo, senha) VALUES (@cpf, @nome, @data, @email, @rg, @endereco, @complemento, @celular, @cargo, @senha)"
                 comando = New MySqlCommand(sqlInsere, db)
-                comando.ExecuteNonQuery()
-                MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information)
             End If
+
+            ' Parâmetros comuns
+            comando.Parameters.AddWithValue("@cpf", user_cpf.Text)
+            comando.Parameters.AddWithValue("@nome", user_nome.Text)
+            comando.Parameters.AddWithValue("@data", user_data.Text)
+            comando.Parameters.AddWithValue("@email", user_email.Text)
+            comando.Parameters.AddWithValue("@rg", user_rg.Text)
+            comando.Parameters.AddWithValue("@endereco", user_end.Text)
+            comando.Parameters.AddWithValue("@complemento", user_comp.Text)
+            comando.Parameters.AddWithValue("@celular", user_cel.Text)
+            comando.Parameters.AddWithValue("@cargo", cmb_cargo.Text)
+            comando.Parameters.AddWithValue("@senha", user_senha.Text)
+
+            comando.ExecuteNonQuery()
+            MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information)
 
             CarregarUsuario(db)
             LimparCampos()
@@ -82,6 +99,7 @@ Public Class usuarios
     Private Sub CarregarCargos()
         With Me.cmb_cargo.Items
             .Clear()
+            .Add("Administrador")
             .Add("Recepcionista")
             .Add("Auxiliar de Serviços Gerais")
         End With
@@ -121,5 +139,17 @@ Public Class usuarios
                 End If
             End If
         End If
+    End Sub
+
+    Private senhaVisivel As Boolean = False
+    Private Sub btn_visualizar_Click(sender As Object, e As EventArgs) Handles btn_visualizar.Click
+        If senhaVisivel Then
+            user_senha.UseSystemPasswordChar = True
+            btn_visualizar.Text = "👁️"
+        Else
+            user_senha.UseSystemPasswordChar = False
+            btn_visualizar.Text = "🙈"
+        End If
+        senhaVisivel = Not senhaVisivel
     End Sub
 End Class

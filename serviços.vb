@@ -1,5 +1,4 @@
 ﻿Imports MySql.Data.MySqlClient
-﻿
 Public Class Serviços
     Dim conexao As MySqlConnection
     Dim servicoId As Integer = 0
@@ -276,23 +275,5 @@ Public Class Serviços
 
     Private Sub btn_salvar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
         SalvarServico()
-    End Sub
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        Dim cargo As Object = cmd.ExecuteScalar()
-        If cargo IsNot Nothing Then
-            Select Case cargo.ToString().ToLower()
-                    Case "administrador"
-                        Dim f As New menu_admin()
-                        f.Show()
-                    Case "recepcionista"
-                        Dim f As New menu_rec()
-                        f.Show()
-                    Case "auxiliar de serviço geral"
-                        Dim f As New menu_sg()
-                        f.Show()
-             End Select    
-             Me.Hide()
-        End If
     End Sub
 End Class

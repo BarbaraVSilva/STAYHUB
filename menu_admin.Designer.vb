@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class menu_admin
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class menu_admin
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(menu_admin))
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -42,6 +41,7 @@ Partial Class menu_admin
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -87,41 +87,41 @@ Partial Class menu_admin
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2CircleButton6 = New Guna.UI2.WinForms.Guna2CircleButton()
-        Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
-        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        btn_hospedes = New Guna.UI2.WinForms.Guna2Button()
+        btn_equipe = New Guna.UI2.WinForms.Guna2Button()
+        btn_reservas = New Guna.UI2.WinForms.Guna2Button()
+        btn_estoque = New Guna.UI2.WinForms.Guna2Button()
+        btn_financeiro = New Guna.UI2.WinForms.Guna2Button()
+        btn_menu = New Guna.UI2.WinForms.Guna2PictureBox()
+        btn_home = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2CircleButton6 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Label3 = New Label()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Label6 = New Label()
+        lbl_financeiro = New Label()
         Label5 = New Label()
         Guna2CircleButton2 = New Guna.UI2.WinForms.Guna2CircleButton()
         Label1 = New Label()
-        Label2 = New Label()
+        lbl_nome = New Label()
         Guna2Separator1 = New Guna.UI2.WinForms.Guna2Separator()
         Label4 = New Label()
         GunaChart1 = New Guna.Charts.WinForms.GunaChart()
         GunaChart2 = New Guna.Charts.WinForms.GunaChart()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        Label7 = New Label()
+        lbl_limpeza = New Label()
         Label8 = New Label()
         Guna2CircleButton3 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel6 = New Guna.UI2.WinForms.Guna2Panel()
-        Label9 = New Label()
+        lbl_reservas = New Label()
         Label10 = New Label()
         Guna2CircleButton4 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel7 = New Guna.UI2.WinForms.Guna2Panel()
-        Label11 = New Label()
+        lbl_estoque = New Label()
         Label12 = New Label()
         Guna2CircleButton5 = New Guna.UI2.WinForms.Guna2CircleButton()
         Guna2Panel1.SuspendLayout()
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(btn_menu, ComponentModel.ISupportInitialize).BeginInit()
         Guna2Panel3.SuspendLayout()
         Guna2Panel4.SuspendLayout()
         Guna2Panel5.SuspendLayout()
@@ -131,13 +131,13 @@ Partial Class menu_admin
         ' 
         ' Guna2Panel1
         ' 
-        Guna2Panel1.Controls.Add(Guna2Button7)
-        Guna2Panel1.Controls.Add(Guna2Button6)
-        Guna2Panel1.Controls.Add(Guna2Button5)
-        Guna2Panel1.Controls.Add(Guna2Button4)
-        Guna2Panel1.Controls.Add(Guna2Button3)
-        Guna2Panel1.Controls.Add(Guna2PictureBox1)
-        Guna2Panel1.Controls.Add(Guna2Button2)
+        Guna2Panel1.Controls.Add(btn_hospedes)
+        Guna2Panel1.Controls.Add(btn_equipe)
+        Guna2Panel1.Controls.Add(btn_reservas)
+        Guna2Panel1.Controls.Add(btn_estoque)
+        Guna2Panel1.Controls.Add(btn_financeiro)
+        Guna2Panel1.Controls.Add(btn_menu)
+        Guna2Panel1.Controls.Add(btn_home)
         Guna2Panel1.Controls.Add(Guna2Panel2)
         Guna2Panel1.CustomizableEdges = CustomizableEdges17
         Guna2Panel1.FillColor = Color.WhiteSmoke
@@ -147,13 +147,168 @@ Partial Class menu_admin
         Guna2Panel1.Size = New Size(161, 519)
         Guna2Panel1.TabIndex = 0
         ' 
+        ' btn_hospedes
+        ' 
+        btn_hospedes.BackColor = Color.Transparent
+        btn_hospedes.BackgroundImageLayout = ImageLayout.None
+        btn_hospedes.CustomizableEdges = CustomizableEdges1
+        btn_hospedes.DisabledState.BorderColor = Color.DarkGray
+        btn_hospedes.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_hospedes.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_hospedes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_hospedes.FillColor = Color.Transparent
+        btn_hospedes.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_hospedes.ForeColor = Color.DarkBlue
+        btn_hospedes.Image = CType(resources.GetObject("btn_hospedes.Image"), Image)
+        btn_hospedes.ImageAlign = HorizontalAlignment.Left
+        btn_hospedes.Location = New Point(12, 304)
+        btn_hospedes.Name = "btn_hospedes"
+        btn_hospedes.Size = New Size(130, 45)
+        btn_hospedes.TabIndex = 14
+        btn_hospedes.Text = "Hóspedes"
+        btn_hospedes.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' btn_equipe
+        ' 
+        btn_equipe.BackColor = Color.Transparent
+        btn_equipe.BackgroundImageLayout = ImageLayout.None
+        btn_equipe.CustomizableEdges = CustomizableEdges3
+        btn_equipe.DisabledState.BorderColor = Color.DarkGray
+        btn_equipe.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_equipe.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_equipe.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_equipe.FillColor = Color.Transparent
+        btn_equipe.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_equipe.ForeColor = Color.DarkBlue
+        btn_equipe.Image = CType(resources.GetObject("btn_equipe.Image"), Image)
+        btn_equipe.ImageAlign = HorizontalAlignment.Left
+        btn_equipe.Location = New Point(12, 266)
+        btn_equipe.Name = "btn_equipe"
+        btn_equipe.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btn_equipe.Size = New Size(130, 45)
+        btn_equipe.TabIndex = 13
+        btn_equipe.Text = "Equipe"
+        btn_equipe.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' btn_reservas
+        ' 
+        btn_reservas.BackColor = Color.Transparent
+        btn_reservas.BackgroundImageLayout = ImageLayout.None
+        btn_reservas.CustomizableEdges = CustomizableEdges5
+        btn_reservas.DisabledState.BorderColor = Color.DarkGray
+        btn_reservas.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_reservas.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_reservas.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_reservas.FillColor = Color.Transparent
+        btn_reservas.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_reservas.ForeColor = Color.DarkBlue
+        btn_reservas.Image = CType(resources.GetObject("btn_reservas.Image"), Image)
+        btn_reservas.ImageAlign = HorizontalAlignment.Left
+        btn_reservas.Location = New Point(12, 227)
+        btn_reservas.Name = "btn_reservas"
+        btn_reservas.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btn_reservas.Size = New Size(130, 45)
+        btn_reservas.TabIndex = 12
+        btn_reservas.Text = "Reservas"
+        btn_reservas.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' btn_estoque
+        ' 
+        btn_estoque.BackColor = Color.Transparent
+        btn_estoque.BackgroundImageLayout = ImageLayout.None
+        btn_estoque.CustomizableEdges = CustomizableEdges7
+        btn_estoque.DisabledState.BorderColor = Color.DarkGray
+        btn_estoque.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_estoque.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_estoque.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_estoque.FillColor = Color.Transparent
+        btn_estoque.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_estoque.ForeColor = Color.DarkBlue
+        btn_estoque.Image = CType(resources.GetObject("btn_estoque.Image"), Image)
+        btn_estoque.ImageAlign = HorizontalAlignment.Left
+        btn_estoque.Location = New Point(13, 188)
+        btn_estoque.Name = "btn_estoque"
+        btn_estoque.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btn_estoque.Size = New Size(130, 45)
+        btn_estoque.TabIndex = 11
+        btn_estoque.Text = "Estoque"
+        btn_estoque.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' btn_financeiro
+        ' 
+        btn_financeiro.BackColor = Color.Transparent
+        btn_financeiro.BackgroundImageLayout = ImageLayout.None
+        btn_financeiro.CustomizableEdges = CustomizableEdges9
+        btn_financeiro.DisabledState.BorderColor = Color.DarkGray
+        btn_financeiro.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_financeiro.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_financeiro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_financeiro.FillColor = Color.Transparent
+        btn_financeiro.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_financeiro.ForeColor = Color.DarkBlue
+        btn_financeiro.Image = CType(resources.GetObject("btn_financeiro.Image"), Image)
+        btn_financeiro.ImageAlign = HorizontalAlignment.Left
+        btn_financeiro.Location = New Point(12, 150)
+        btn_financeiro.Name = "btn_financeiro"
+        btn_financeiro.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btn_financeiro.Size = New Size(130, 45)
+        btn_financeiro.TabIndex = 10
+        btn_financeiro.Text = "Financeiro"
+        btn_financeiro.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' btn_menu
+        ' 
+        btn_menu.BackColor = Color.Transparent
+        btn_menu.CustomizableEdges = CustomizableEdges11
+        btn_menu.FillColor = Color.Transparent
+        btn_menu.Image = CType(resources.GetObject("btn_menu.Image"), Image)
+        btn_menu.ImageRotate = 0F
+        btn_menu.Location = New Point(29, -10)
+        btn_menu.Name = "btn_menu"
+        btn_menu.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btn_menu.Size = New Size(106, 100)
+        btn_menu.SizeMode = PictureBoxSizeMode.StretchImage
+        btn_menu.TabIndex = 3
+        btn_menu.TabStop = False
+        ' 
+        ' btn_home
+        ' 
+        btn_home.BackColor = Color.Transparent
+        btn_home.BackgroundImageLayout = ImageLayout.None
+        btn_home.CustomizableEdges = CustomizableEdges13
+        btn_home.DisabledState.BorderColor = Color.DarkGray
+        btn_home.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_home.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        btn_home.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
+        btn_home.FillColor = Color.Transparent
+        btn_home.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        btn_home.ForeColor = Color.DarkBlue
+        btn_home.Image = CType(resources.GetObject("btn_home.Image"), Image)
+        btn_home.ImageAlign = HorizontalAlignment.Left
+        btn_home.Location = New Point(12, 114)
+        btn_home.Name = "btn_home"
+        btn_home.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btn_home.Size = New Size(130, 45)
+        btn_home.TabIndex = 4
+        btn_home.Text = "Home"
+        btn_home.TextAlign = HorizontalAlignment.Left
+        ' 
+        ' Guna2Panel2
+        ' 
+        Guna2Panel2.CustomizableEdges = CustomizableEdges15
+        Guna2Panel2.Location = New Point(161, 1)
+        Guna2Panel2.Name = "Guna2Panel2"
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel2.Size = New Size(639, 36)
+        Guna2Panel2.TabIndex = 1
+        ' 
         ' Guna2CircleButton6
         ' 
         Guna2CircleButton6.BackColor = Color.Transparent
         Guna2CircleButton6.DisabledState.BorderColor = Color.DarkGray
         Guna2CircleButton6.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton6.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton6.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton6.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        Guna2CircleButton6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         Guna2CircleButton6.FillColor = Color.DarkBlue
         Guna2CircleButton6.Font = New Font("Segoe UI", 9F)
         Guna2CircleButton6.ForeColor = Color.White
@@ -166,162 +321,6 @@ Partial Class menu_admin
         Guna2CircleButton6.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CircleButton6.Size = New Size(43, 42)
         Guna2CircleButton6.TabIndex = 16
-        ' 
-        ' Guna2Button7
-        ' 
-        Guna2Button7.BackColor = Color.Transparent
-        Guna2Button7.BackgroundImageLayout = ImageLayout.None
-        Guna2Button7.CustomizableEdges = CustomizableEdges1
-        Guna2Button7.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button7.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button7.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button7.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button7.FillColor = Color.Transparent
-        Guna2Button7.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button7.ForeColor = Color.DarkBlue
-        Guna2Button7.Image = CType(resources.GetObject("Guna2Button7.Image"), Image)
-        Guna2Button7.ImageAlign = HorizontalAlignment.Left
-        Guna2Button7.Location = New Point(12, 304)
-        Guna2Button7.Name = "Guna2Button7"
-        Guna2Button7.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button7.Size = New Size(130, 45)
-        Guna2Button7.TabIndex = 14
-        Guna2Button7.Text = "Hóspede"
-        Guna2Button7.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2Button6
-        ' 
-        Guna2Button6.BackColor = Color.Transparent
-        Guna2Button6.BackgroundImageLayout = ImageLayout.None
-        Guna2Button6.CustomizableEdges = CustomizableEdges3
-        Guna2Button6.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button6.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button6.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button6.FillColor = Color.Transparent
-        Guna2Button6.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button6.ForeColor = Color.DarkBlue
-        Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), Image)
-        Guna2Button6.ImageAlign = HorizontalAlignment.Left
-        Guna2Button6.Location = New Point(12, 266)
-        Guna2Button6.Name = "Guna2Button6"
-        Guna2Button6.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button6.Size = New Size(130, 45)
-        Guna2Button6.TabIndex = 13
-        Guna2Button6.Text = "Equipe"
-        Guna2Button6.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2Button5
-        ' 
-        Guna2Button5.BackColor = Color.Transparent
-        Guna2Button5.BackgroundImageLayout = ImageLayout.None
-        Guna2Button5.CustomizableEdges = CustomizableEdges5
-        Guna2Button5.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button5.FillColor = Color.Transparent
-        Guna2Button5.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button5.ForeColor = Color.DarkBlue
-        Guna2Button5.Image = CType(resources.GetObject("Guna2Button5.Image"), Image)
-        Guna2Button5.ImageAlign = HorizontalAlignment.Left
-        Guna2Button5.Location = New Point(12, 227)
-        Guna2Button5.Name = "Guna2Button5"
-        Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button5.Size = New Size(130, 45)
-        Guna2Button5.TabIndex = 12
-        Guna2Button5.Text = "Reservas"
-        Guna2Button5.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2Button4
-        ' 
-        Guna2Button4.BackColor = Color.Transparent
-        Guna2Button4.BackgroundImageLayout = ImageLayout.None
-        Guna2Button4.CustomizableEdges = CustomizableEdges7
-        Guna2Button4.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button4.FillColor = Color.Transparent
-        Guna2Button4.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button4.ForeColor = Color.DarkBlue
-        Guna2Button4.Image = CType(resources.GetObject("Guna2Button4.Image"), Image)
-        Guna2Button4.ImageAlign = HorizontalAlignment.Left
-        Guna2Button4.Location = New Point(13, 188)
-        Guna2Button4.Name = "Guna2Button4"
-        Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2Button4.Size = New Size(130, 45)
-        Guna2Button4.TabIndex = 11
-        Guna2Button4.Text = "Estoque"
-        Guna2Button4.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2Button3
-        ' 
-        Guna2Button3.BackColor = Color.Transparent
-        Guna2Button3.BackgroundImageLayout = ImageLayout.None
-        Guna2Button3.CustomizableEdges = CustomizableEdges9
-        Guna2Button3.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button3.FillColor = Color.Transparent
-        Guna2Button3.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button3.ForeColor = Color.DarkBlue
-        Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), Image)
-        Guna2Button3.ImageAlign = HorizontalAlignment.Left
-        Guna2Button3.Location = New Point(12, 150)
-        Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2Button3.Size = New Size(130, 45)
-        Guna2Button3.TabIndex = 10
-        Guna2Button3.Text = "Financeiro"
-        Guna2Button3.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2PictureBox1
-        ' 
-        Guna2PictureBox1.BackColor = Color.Transparent
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges11
-        Guna2PictureBox1.FillColor = Color.Transparent
-        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(29, -10)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2PictureBox1.Size = New Size(106, 100)
-        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        Guna2PictureBox1.TabIndex = 3
-        Guna2PictureBox1.TabStop = False
-        ' 
-        ' Guna2Button2
-        ' 
-        Guna2Button2.BackColor = Color.Transparent
-        Guna2Button2.BackgroundImageLayout = ImageLayout.None
-        Guna2Button2.CustomizableEdges = CustomizableEdges13
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.FillColor = Color.Transparent
-        Guna2Button2.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Guna2Button2.ForeColor = Color.DarkBlue
-        Guna2Button2.Image = CType(resources.GetObject("Guna2Button2.Image"), Image)
-        Guna2Button2.ImageAlign = HorizontalAlignment.Left
-        Guna2Button2.Location = New Point(12, 114)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        Guna2Button2.Size = New Size(130, 45)
-        Guna2Button2.TabIndex = 4
-        Guna2Button2.Text = "Home"
-        Guna2Button2.TextAlign = HorizontalAlignment.Left
-        ' 
-        ' Guna2Panel2
-        ' 
-        Guna2Panel2.CustomizableEdges = CustomizableEdges15
-        Guna2Panel2.Location = New Point(161, 1)
-        Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2Panel2.Size = New Size(639, 36)
-        Guna2Panel2.TabIndex = 1
         ' 
         ' Guna2Panel3
         ' 
@@ -339,7 +338,7 @@ Partial Class menu_admin
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label3.ForeColor = Color.DarkBlue
         Label3.Location = New Point(14, 22)
         Label3.Name = "Label3"
@@ -350,7 +349,7 @@ Partial Class menu_admin
         ' Guna2Panel4
         ' 
         Guna2Panel4.BorderRadius = 10
-        Guna2Panel4.Controls.Add(Label6)
+        Guna2Panel4.Controls.Add(lbl_financeiro)
         Guna2Panel4.Controls.Add(Label5)
         Guna2Panel4.Controls.Add(Guna2CircleButton2)
         Guna2Panel4.CustomizableEdges = CustomizableEdges23
@@ -361,23 +360,23 @@ Partial Class menu_admin
         Guna2Panel4.Size = New Size(148, 86)
         Guna2Panel4.TabIndex = 2
         ' 
-        ' Label6
+        ' lbl_financeiro
         ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.Transparent
-        Label6.Location = New Point(61, 44)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(59, 15)
-        Label6.TabIndex = 2
-        Label6.Text = "R$650,00"
+        lbl_financeiro.AutoSize = True
+        lbl_financeiro.BackColor = Color.Transparent
+        lbl_financeiro.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lbl_financeiro.ForeColor = Color.Transparent
+        lbl_financeiro.Location = New Point(61, 44)
+        lbl_financeiro.Name = "lbl_financeiro"
+        lbl_financeiro.Size = New Size(14, 15)
+        lbl_financeiro.TabIndex = 2
+        lbl_financeiro.Text = "0"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label5.ForeColor = SystemColors.ControlLightLight
         Label5.Location = New Point(59, 21)
         Label5.Name = "Label5"
@@ -390,8 +389,8 @@ Partial Class menu_admin
         Guna2CircleButton2.BackColor = Color.Transparent
         Guna2CircleButton2.DisabledState.BorderColor = Color.DarkGray
         Guna2CircleButton2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        Guna2CircleButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         Guna2CircleButton2.FillColor = Color.Transparent
         Guna2CircleButton2.Font = New Font("Segoe UI", 9F)
         Guna2CircleButton2.ForeColor = Color.White
@@ -409,18 +408,18 @@ Partial Class menu_admin
         Label1.AutoSize = True
         Label1.Location = New Point(175, 72)
         Label1.Name = "Label1"
-        Label1.Size = New Size(54, 15)
+        Label1.Size = New Size(83, 15)
         Label1.TabIndex = 3
-        Label1.Text = "Bom dia,"
+        Label1.Text = "Bem-vindo(a),"
         ' 
-        ' Label2
+        ' lbl_nome
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(175, 96)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(33, 15)
-        Label2.TabIndex = 4
-        Label2.Text = "Adm"
+        lbl_nome.AutoSize = True
+        lbl_nome.Location = New Point(175, 96)
+        lbl_nome.Name = "lbl_nome"
+        lbl_nome.Size = New Size(33, 15)
+        lbl_nome.TabIndex = 4
+        lbl_nome.Text = "Adm"
         ' 
         ' Guna2Separator1
         ' 
@@ -432,7 +431,7 @@ Partial Class menu_admin
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label4.Location = New Point(175, 144)
         Label4.Name = "Label4"
         Label4.Size = New Size(66, 15)
@@ -510,7 +509,7 @@ Partial Class menu_admin
         ' Guna2Panel5
         ' 
         Guna2Panel5.BorderRadius = 10
-        Guna2Panel5.Controls.Add(Label7)
+        Guna2Panel5.Controls.Add(lbl_limpeza)
         Guna2Panel5.Controls.Add(Label8)
         Guna2Panel5.Controls.Add(Guna2CircleButton3)
         Guna2Panel5.CustomizableEdges = CustomizableEdges26
@@ -521,23 +520,23 @@ Partial Class menu_admin
         Guna2Panel5.Size = New Size(148, 86)
         Guna2Panel5.TabIndex = 9
         ' 
-        ' Label7
+        ' lbl_limpeza
         ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.Transparent
-        Label7.Location = New Point(69, 44)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(21, 15)
-        Label7.TabIndex = 3
-        Label7.Text = "30"
+        lbl_limpeza.AutoSize = True
+        lbl_limpeza.BackColor = Color.Transparent
+        lbl_limpeza.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lbl_limpeza.ForeColor = Color.Transparent
+        lbl_limpeza.Location = New Point(69, 44)
+        lbl_limpeza.Name = "lbl_limpeza"
+        lbl_limpeza.Size = New Size(14, 15)
+        lbl_limpeza.TabIndex = 3
+        lbl_limpeza.Text = "0"
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
         Label8.BackColor = Color.Transparent
-        Label8.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label8.ForeColor = Color.White
         Label8.Location = New Point(69, 21)
         Label8.Name = "Label8"
@@ -550,8 +549,8 @@ Partial Class menu_admin
         Guna2CircleButton3.BackColor = Color.Transparent
         Guna2CircleButton3.DisabledState.BorderColor = Color.DarkGray
         Guna2CircleButton3.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton3.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        Guna2CircleButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         Guna2CircleButton3.FillColor = Color.Transparent
         Guna2CircleButton3.Font = New Font("Segoe UI", 9F)
         Guna2CircleButton3.ForeColor = Color.White
@@ -567,7 +566,7 @@ Partial Class menu_admin
         ' Guna2Panel6
         ' 
         Guna2Panel6.BorderRadius = 10
-        Guna2Panel6.Controls.Add(Label9)
+        Guna2Panel6.Controls.Add(lbl_reservas)
         Guna2Panel6.Controls.Add(Label10)
         Guna2Panel6.Controls.Add(Guna2CircleButton4)
         Guna2Panel6.CustomizableEdges = CustomizableEdges29
@@ -578,23 +577,23 @@ Partial Class menu_admin
         Guna2Panel6.Size = New Size(148, 86)
         Guna2Panel6.TabIndex = 10
         ' 
-        ' Label9
+        ' lbl_reservas
         ' 
-        Label9.AutoSize = True
-        Label9.BackColor = Color.Transparent
-        Label9.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.Transparent
-        Label9.Location = New Point(70, 44)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(21, 15)
-        Label9.TabIndex = 4
-        Label9.Text = "30"
+        lbl_reservas.AutoSize = True
+        lbl_reservas.BackColor = Color.Transparent
+        lbl_reservas.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lbl_reservas.ForeColor = Color.Transparent
+        lbl_reservas.Location = New Point(70, 44)
+        lbl_reservas.Name = "lbl_reservas"
+        lbl_reservas.Size = New Size(14, 15)
+        lbl_reservas.TabIndex = 4
+        lbl_reservas.Text = "0"
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label10.ForeColor = Color.White
         Label10.Location = New Point(70, 21)
         Label10.Name = "Label10"
@@ -607,8 +606,8 @@ Partial Class menu_admin
         Guna2CircleButton4.BackColor = Color.Transparent
         Guna2CircleButton4.DisabledState.BorderColor = Color.DarkGray
         Guna2CircleButton4.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton4.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton4.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton4.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        Guna2CircleButton4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         Guna2CircleButton4.FillColor = Color.Transparent
         Guna2CircleButton4.Font = New Font("Segoe UI", 9F)
         Guna2CircleButton4.ForeColor = Color.White
@@ -624,7 +623,7 @@ Partial Class menu_admin
         ' Guna2Panel7
         ' 
         Guna2Panel7.BorderRadius = 10
-        Guna2Panel7.Controls.Add(Label11)
+        Guna2Panel7.Controls.Add(lbl_estoque)
         Guna2Panel7.Controls.Add(Label12)
         Guna2Panel7.Controls.Add(Guna2CircleButton5)
         Guna2Panel7.CustomizableEdges = CustomizableEdges32
@@ -635,23 +634,23 @@ Partial Class menu_admin
         Guna2Panel7.Size = New Size(148, 86)
         Guna2Panel7.TabIndex = 11
         ' 
-        ' Label11
+        ' lbl_estoque
         ' 
-        Label11.AutoSize = True
-        Label11.BackColor = Color.Transparent
-        Label11.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.Transparent
-        Label11.Location = New Point(77, 44)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(21, 15)
-        Label11.TabIndex = 4
-        Label11.Text = "30"
+        lbl_estoque.AutoSize = True
+        lbl_estoque.BackColor = Color.Transparent
+        lbl_estoque.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
+        lbl_estoque.ForeColor = Color.Transparent
+        lbl_estoque.Location = New Point(77, 44)
+        lbl_estoque.Name = "lbl_estoque"
+        lbl_estoque.Size = New Size(14, 15)
+        lbl_estoque.TabIndex = 4
+        lbl_estoque.Text = "0"
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
         Label12.BackColor = Color.Transparent
-        Label12.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label12.ForeColor = Color.White
         Label12.Location = New Point(77, 21)
         Label12.Name = "Label12"
@@ -664,8 +663,8 @@ Partial Class menu_admin
         Guna2CircleButton5.BackColor = Color.Transparent
         Guna2CircleButton5.DisabledState.BorderColor = Color.DarkGray
         Guna2CircleButton5.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2CircleButton5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2CircleButton5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2CircleButton5.DisabledState.FillColor = Color.FromArgb(169, 169, 169)
+        Guna2CircleButton5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141)
         Guna2CircleButton5.FillColor = Color.Transparent
         Guna2CircleButton5.Font = New Font("Segoe UI", 9F)
         Guna2CircleButton5.ForeColor = Color.White
@@ -691,7 +690,7 @@ Partial Class menu_admin
         Controls.Add(GunaChart1)
         Controls.Add(Label4)
         Controls.Add(Guna2Separator1)
-        Controls.Add(Label2)
+        Controls.Add(lbl_nome)
         Controls.Add(Label1)
         Controls.Add(Guna2Panel4)
         Controls.Add(Guna2Panel3)
@@ -700,7 +699,7 @@ Partial Class menu_admin
         Name = "menu_admin"
         Text = "STAYHUB"
         Guna2Panel1.ResumeLayout(False)
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(btn_menu, ComponentModel.ISupportInitialize).EndInit()
         Guna2Panel3.ResumeLayout(False)
         Guna2Panel3.PerformLayout()
         Guna2Panel4.ResumeLayout(False)
@@ -717,21 +716,21 @@ Partial Class menu_admin
 
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents btn_home As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_menu As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button4 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button3 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2Button7 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_estoque As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_financeiro As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_equipe As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_reservas As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_hospedes As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbl_nome As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2Separator1 As Guna.UI2.WinForms.Guna2Separator
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lbl_financeiro As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Guna2CircleButton2 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents GunaChart1 As Guna.Charts.WinForms.GunaChart
@@ -746,7 +745,7 @@ Partial Class menu_admin
     Friend WithEvents Label12 As Label
     Friend WithEvents Guna2CircleButton5 As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents Guna2CircleButton6 As Guna.UI2.WinForms.Guna2CircleButton
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lbl_limpeza As Label
+    Friend WithEvents lbl_reservas As Label
+    Friend WithEvents lbl_estoque As Label
 End Class

@@ -7,39 +7,57 @@ Public Class login
     End Sub
 
     Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_entrar.Click
-        Dim usuario As String = txt_usuario.Text
-        Dim senha As String = txt_senha.Text
+        Dim usuario As String = txt_usuario.Text.Trim()
+        Dim senha As String = txt_senha.Text.Trim()
 
-        ' Conexão com o banco
+        If usuario = "" Or senha = "" Then
+            MessageBox.Show("Preencha todos os campos.")
+            Return
+        End If
+
         Dim connString As String = "Server=localhost;Port=3307;Database=stayhub;Uid=root;Pwd=usbw;"
         Using conn As New MySqlConnection(connString)
             conn.Open()
-            Dim cmd As New MySqlCommand("SELECT Cargo FROM Usuarios WHERE (Email=@usuario OR CPF=@usuario) AND Senha=@senha", conn)
+            Dim cmd As New MySqlCommand("SELECT nome, cargo FROM usuarios WHERE (email=@usuario OR cpf=@usuario) AND senha=@senha", conn)
             cmd.Parameters.AddWithValue("@usuario", usuario)
             cmd.Parameters.AddWithValue("@senha", senha)
 
-            Dim cargo As Object = cmd.ExecuteScalar()
-            If cargo IsNot Nothing Then
-                Select Case cargo.ToString().ToLower()
+            Dim leitor As MySqlDataReader = cmd.ExecuteReader()
+            If leitor.Read() Then
+                nomeUsuarioLogado = leitor("nome").ToString()
+                Dim cargo As String = leitor("cargo").ToString().ToLower()
+
+                leitor.Close()
+
+                Select Case cargo
                     Case "administrador"
-                        Dim f As New menu_admin()
+                        Dim f As New menu_sec()
                         f.Show()
                     Case "recepcionista"
                         Dim f As New menu_rec()
                         f.Show()
-                    Case "auxiliar de serviço geral"
-                        Dim f As New menu_sg()
+                    Case "auxiliar de serviços gerais"
+                        Dim f As New menu_rec()
                         f.Show()
                 End Select
                 Me.Hide()
             Else
+                leitor.Close()
                 MessageBox.Show("Usuário ou senha inválidos!")
             End If
         End Using
     End Sub
 
-    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
-
+    Private senhaVisivel As Boolean = False
+    Private Sub btn_visualizar_Click(sender As Object, e As EventArgs) Handles btn_visualizar.Click
+        If senhaVisivel Then
+            txt_senha.UseSystemPasswordChar = True
+            btn_visualizar.Text = "👁️"
+        Else
+            txt_senha.UseSystemPasswordChar = False
+            btn_visualizar.Text = "🙈"
+        End If
+        senhaVisivel = Not senhaVisivel
     End Sub
 
     Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -160,7 +160,7 @@ Partial Class hospedes
         Label7.AutoSize = True
         Label7.Location = New Point(31, 318)
         Label7.Name = "Label7"
-        Label7.Size = New Size(51, 15)
+        Label7.Size = New Size(52, 15)
         Label7.TabIndex = 12
         Label7.Text = "Telefone"
         ' 
@@ -445,9 +445,6 @@ Partial Class hospedes
 
     Private Sub Label11_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Public Sub New()
     End Sub
 
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
