@@ -7,17 +7,16 @@ Public Class Serviços
     Private Sub Serviços_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ConectaBanco()
         CarregarServicos(db)
-        ConfigurarDataGridView()
     End Sub
 
     Private Sub ConfigurarDataGridView()
         ' Configurar colunas do DataGridView
-        dtgList.Columns.Clear()
-        dtgList.Columns.Add("id", "ID")
-        dtgList.Columns.Add("nome", "Nome do Serviço")
-        dtgList.Columns.Add("categoria", "Categoria")
-        dtgList.Columns.Add("preco", "Preço")
-        dtgList.Columns.Add("descricao", "Descrição")
+        dtgServ.Columns.Clear()
+        dtgServ.Columns.Add("id", "ID")
+        dtgServ.Columns.Add("nome", "Nome do Serviço")
+        dtgServ.Columns.Add("categoria", "Categoria")
+        dtgServ.Columns.Add("preco", "Preço")
+        dtgServ.Columns.Add("descricao", "Descrição")
 
         ' Adicionar colunas de ação
         Dim editarColuna As New DataGridViewButtonColumn()
@@ -25,20 +24,20 @@ Public Class Serviços
         editarColuna.HeaderText = "Editar"
         editarColuna.Text = "✏️"
         editarColuna.UseColumnTextForButtonValue = True
-        dtgList.Columns.Add(editarColuna)
+        dtgServ.Columns.Add(editarColuna)
 
         Dim excluirColuna As New DataGridViewButtonColumn()
         excluirColuna.Name = "excluir"
         excluirColuna.HeaderText = "Excluir"
         excluirColuna.Text = "❌"
         excluirColuna.UseColumnTextForButtonValue = True
-        dtgList.Columns.Add(excluirColuna)
+        dtgServ.Columns.Add(excluirColuna)
 
         ' Configurar propriedades do DataGridView
-        dtgList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        dtgList.AllowUserToAddRows = False
-        dtgList.ReadOnly = True
-        dtgList.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dtgServ.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dtgServ.AllowUserToAddRows = False
+        dtgServ.ReadOnly = True
+        dtgServ.SelectionMode = DataGridViewSelectionMode.FullRowSelect
     End Sub
 
     Private Sub CarregarServicos(conexao As MySqlConnection)
@@ -55,10 +54,10 @@ Public Class Serviços
             Dim comando As New MySqlCommand(sql, conexao)
             Dim leitor As MySqlDataReader = comando.ExecuteReader()
 
-            dtgList.Rows.Clear()
+            dtgServ.Rows.Clear()
 
             While leitor.Read()
-                dtgList.Rows.Add(
+                dtgServ.Rows.Add(
                     leitor("id"),
                     leitor("nome"),
                     leitor("categoria"),
@@ -96,7 +95,7 @@ Public Class Serviços
     Private Sub LimparCampos()
         txtName.Clear()
         txtPrice.Clear()
-        TextBox1.Clear() ' Campo categoria
+        txtCategoria.Clear() ' Campo categoria
         servicoId = 0
         modoEdicao = False
         txtName.Focus()
@@ -130,9 +129,9 @@ Public Class Serviços
                 Dim sql As String = "UPDATE servicos SET nome=@nome, categoria=@categoria, preco=@preco, descricao=@descricao WHERE id=@id"
                 Dim comando As New MySqlCommand(sql, db)
                 comando.Parameters.AddWithValue("@nome", txtName.Text.Trim())
-                comando.Parameters.AddWithValue("@categoria", TextBox1.Text.Trim())
+                comando.Parameters.AddWithValue("@categoria", txtCategoria.Text.Trim())
                 comando.Parameters.AddWithValue("@preco", preco)
-                comando.Parameters.AddWithValue("@descricao", If(String.IsNullOrWhiteSpace(TextBox1.Text), "", TextBox1.Text.Trim()))
+                comando.Parameters.AddWithValue("@descricao", If(String.IsNullOrWhiteSpace(txtCategoria.Text), "", txtCategoria.Text.Trim()))
                 comando.Parameters.AddWithValue("@id", servicoId)
                 comando.ExecuteNonQuery()
                 MsgBox("Serviço atualizado com sucesso!", MsgBoxStyle.Information)
@@ -141,9 +140,9 @@ Public Class Serviços
                 Dim sql As String = "INSERT INTO servicos (nome, categoria, preco, descricao) VALUES (@nome, @categoria, @preco, @descricao)"
                 Dim comando As New MySqlCommand(sql, db)
                 comando.Parameters.AddWithValue("@nome", txtName.Text.Trim())
-                comando.Parameters.AddWithValue("@categoria", TextBox1.Text.Trim())
+                comando.Parameters.AddWithValue("@categoria", txtCategoria.Text.Trim())
                 comando.Parameters.AddWithValue("@preco", preco)
-                comando.Parameters.AddWithValue("@descricao", If(String.IsNullOrWhiteSpace(TextBox1.Text), "", TextBox1.Text.Trim()))
+                comando.Parameters.AddWithValue("@descricao", If(String.IsNullOrWhiteSpace(txtCategoria.Text), "", txtCategoria.Text.Trim()))
                 comando.ExecuteNonQuery()
                 MsgBox("Serviço cadastrado com sucesso!", MsgBoxStyle.Information)
             End If
@@ -156,16 +155,16 @@ Public Class Serviços
         End Try
     End Sub
 
-    Private Sub dtgList_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgList.CellContentClick
+    Private Sub dtgList_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dtgServ.CellContentClick
         If e.RowIndex >= 0 Then
-            Dim idSelecionado As Integer = Convert.ToInt32(dtgList.Rows(e.RowIndex).Cells(0).Value)
+            Dim idSelecionado As Integer = Convert.ToInt32(dtgServ.Rows(e.RowIndex).Cells(0).Value)
 
             ' EDITAR
-            If dtgList.Columns(e.ColumnIndex).Name = "editar" Then
+            If dtgServ.Columns(e.ColumnIndex).Name = "editar" Then
                 CarregarServicoParaEdicao(idSelecionado)
 
                 ' EXCLUIR
-            ElseIf dtgList.Columns(e.ColumnIndex).Name = "excluir" Then
+            ElseIf dtgServ.Columns(e.ColumnIndex).Name = "excluir" Then
                 Dim confirmar = MsgBox("Deseja excluir este serviço?", MsgBoxStyle.YesNo + MsgBoxStyle.Question)
                 If confirmar = MsgBoxResult.Yes Then
                     ExcluirServico(idSelecionado)
@@ -184,7 +183,7 @@ Public Class Serviços
             If leitor.Read() Then
                 servicoId = Convert.ToInt32(leitor("id"))
                 txtName.Text = leitor("nome").ToString()
-                TextBox1.Text = leitor("categoria").ToString()
+                txtCategoria.Text = leitor("categoria").ToString()
                 txtPrice.Text = leitor("preco").ToString()
                 modoEdicao = True
             End If
@@ -238,10 +237,10 @@ Public Class Serviços
             comando.Parameters.AddWithValue("@busca", "%" & termoBusca & "%")
             Dim leitor As MySqlDataReader = comando.ExecuteReader()
 
-            dtgList.Rows.Clear()
+            dtgServ.Rows.Clear()
 
             While leitor.Read()
-                dtgList.Rows.Add(
+                dtgServ.Rows.Add(
                     leitor("id"),
                     leitor("nome"),
                     leitor("categoria"),
@@ -252,7 +251,7 @@ Public Class Serviços
 
             leitor.Close()
 
-            If dtgList.Rows.Count = 0 Then
+            If dtgServ.Rows.Count = 0 Then
                 MsgBox("Nenhum serviço encontrado com o termo: " & termoBusca, MsgBoxStyle.Information)
             End If
 
@@ -275,5 +274,23 @@ Public Class Serviços
 
     Private Sub btn_salvar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
         SalvarServico()
+    End Sub
+
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
+        Select Case CargoUsuario
+            Case "administrador"
+                Dim f As New menu_admin()
+                f.Show()
+            Case "recepcionista"
+                Dim f As New menu_rec()
+                f.Show()
+            Case "auxiliar de serviços gerais"
+                Dim f As New menu_sg()
+                f.Show()
+            Case Else
+                MessageBox.Show("Cargo do usuário não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Select
+
+        Me.Close()
     End Sub
 End Class

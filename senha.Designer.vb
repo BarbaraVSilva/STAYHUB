@@ -31,6 +31,8 @@ Partial Class senha
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         btn_entrar = New Guna.UI2.WinForms.Guna2Button()
         Label4 = New Label()
@@ -45,6 +47,7 @@ Partial Class senha
         txt_cpf = New MaskedTextBox()
         btn_visualizar = New Guna.UI2.WinForms.Guna2Button()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        btn_cancelar = New Guna.UI2.WinForms.Guna2Button()
         CType(Guna2PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -75,7 +78,7 @@ Partial Class senha
         btn_entrar.FillColor = Color.DarkBlue
         btn_entrar.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btn_entrar.ForeColor = Color.White
-        btn_entrar.Location = New Point(171, 265)
+        btn_entrar.Location = New Point(88, 266)
         btn_entrar.Name = "btn_entrar"
         btn_entrar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btn_entrar.Size = New Size(121, 38)
@@ -89,7 +92,7 @@ Partial Class senha
         Label4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.Location = New Point(42, 115)
         Label4.Name = "Label4"
-        Label4.Size = New Size(133, 15)
+        Label4.Size = New Size(134, 15)
         Label4.TabIndex = 18
         Label4.Text = "Insira seus dados abaixo"
         ' 
@@ -208,11 +211,31 @@ Partial Class senha
         Guna2Button1.Size = New Size(27, 19)
         Guna2Button1.TabIndex = 29
         ' 
+        ' btn_cancelar
+        ' 
+        btn_cancelar.BorderRadius = 10
+        btn_cancelar.CustomizableEdges = CustomizableEdges9
+        btn_cancelar.DisabledState.BorderColor = Color.DarkGray
+        btn_cancelar.DisabledState.CustomBorderColor = Color.DarkGray
+        btn_cancelar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btn_cancelar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btn_cancelar.FillColor = Color.DarkBlue
+        btn_cancelar.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btn_cancelar.ForeColor = Color.White
+        btn_cancelar.Location = New Point(259, 266)
+        btn_cancelar.Name = "btn_cancelar"
+        btn_cancelar.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        btn_cancelar.Size = New Size(121, 38)
+        btn_cancelar.TabIndex = 30
+        btn_cancelar.Text = "Cancelar"
+        btn_cancelar.Tile = True
+        ' 
         ' senha
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(485, 325)
+        Controls.Add(btn_cancelar)
         Controls.Add(Guna2Button1)
         Controls.Add(btn_visualizar)
         Controls.Add(txt_cpf)
@@ -249,4 +272,5 @@ Partial Class senha
     Friend WithEvents txt_cpf As MaskedTextBox
     Friend WithEvents btn_visualizar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btn_cancelar As Guna.UI2.WinForms.Guna2Button
 End Class

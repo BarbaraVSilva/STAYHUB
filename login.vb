@@ -24,20 +24,20 @@ Public Class login
 
             Dim leitor As MySqlDataReader = cmd.ExecuteReader()
             If leitor.Read() Then
-                nomeUsuarioLogado = leitor("nome").ToString()
-                Dim cargo As String = leitor("cargo").ToString().ToLower()
+                NomeUsuario = leitor("nome").ToString()
+                CargoUsuario = leitor("cargo").ToString().ToLower()
 
                 leitor.Close()
 
-                Select Case cargo
+                Select Case CargoUsuario
                     Case "administrador"
-                        Dim f As New menu_sec()
+                        Dim f As New menu_admin()
                         f.Show()
                     Case "recepcionista"
                         Dim f As New menu_rec()
                         f.Show()
                     Case "auxiliar de serviços gerais"
-                        Dim f As New menu_rec()
+                        Dim f As New menu_sg() ' Substitua por menu_servicos se tiver um específico
                         f.Show()
                 End Select
                 Me.Hide()

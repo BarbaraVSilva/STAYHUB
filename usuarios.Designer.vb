@@ -22,15 +22,13 @@ Partial Class usuarios
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(usuarios))
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(usuarios))
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label1 = New Label()
         user_nome = New TextBox()
         cmb_cargo = New ComboBox()
@@ -58,15 +56,16 @@ Partial Class usuarios
         TabPage2 = New TabPage()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         dgv_dados = New DataGridView()
+        Id = New DataGridViewTextBoxColumn()
         Nome = New DataGridViewTextBoxColumn()
         CPF = New DataGridViewTextBoxColumn()
         Cargo = New DataGridViewTextBoxColumn()
+        Email = New DataGridViewTextBoxColumn()
         ToolStrip1 = New ToolStrip()
         ToolStripButton2 = New ToolStripButton()
         txt_buscar = New ToolStripTextBox()
         ToolStripLabel1 = New ToolStripLabel()
         ToolStripLabel2 = New ToolStripLabel()
-        btn_visualizar = New Guna.UI2.WinForms.Guna2Button()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         TabPage2.SuspendLayout()
@@ -221,7 +220,7 @@ Partial Class usuarios
         ' 
         TabControl1.Controls.Add(TabPage1)
         TabControl1.Controls.Add(TabPage2)
-        TabControl1.Location = New Point(0, 0)
+        TabControl1.Location = New Point(0, 1)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(546, 468)
@@ -231,7 +230,6 @@ Partial Class usuarios
         ' 
         TabPage1.BackColor = Color.Transparent
         TabPage1.BackgroundImageLayout = ImageLayout.Stretch
-        TabPage1.Controls.Add(btn_visualizar)
         TabPage1.Controls.Add(user_cel)
         TabPage1.Controls.Add(user_rg)
         TabPage1.Controls.Add(user_cpf)
@@ -259,7 +257,7 @@ Partial Class usuarios
         TabPage1.Padding = New Padding(3)
         TabPage1.Size = New Size(538, 440)
         TabPage1.TabIndex = 0
-        TabPage1.Text = "Cadastrar usuário"
+        TabPage1.Text = "Detalhes"
         ' 
         ' user_cel
         ' 
@@ -287,7 +285,7 @@ Partial Class usuarios
         ' 
         ' Guna2Button2
         ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges3
+        Guna2Button2.CustomizableEdges = CustomizableEdges1
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -299,14 +297,14 @@ Partial Class usuarios
         Guna2Button2.ImageSize = New Size(150, 150)
         Guna2Button2.Location = New Point(192, 6)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button2.Size = New Size(141, 88)
         Guna2Button2.TabIndex = 24
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BorderRadius = 10
-        Guna2Button1.CustomizableEdges = CustomizableEdges5
+        Guna2Button1.CustomizableEdges = CustomizableEdges3
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -316,10 +314,10 @@ Partial Class usuarios
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Location = New Point(162, 381)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button1.Size = New Size(199, 39)
         Guna2Button1.TabIndex = 22
-        Guna2Button1.Text = "Cadastrar"
+        Guna2Button1.Text = "Salvar"
         ' 
         ' TabPage2
         ' 
@@ -337,7 +335,7 @@ Partial Class usuarios
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges7
+        Guna2Button3.CustomizableEdges = CustomizableEdges5
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -349,18 +347,23 @@ Partial Class usuarios
         Guna2Button3.ImageSize = New Size(80, 80)
         Guna2Button3.Location = New Point(12, 4)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Button3.Size = New Size(71, 39)
         Guna2Button3.TabIndex = 25
         ' 
         ' dgv_dados
         ' 
         dgv_dados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgv_dados.Columns.AddRange(New DataGridViewColumn() {Nome, CPF, Cargo})
+        dgv_dados.Columns.AddRange(New DataGridViewColumn() {Id, Nome, CPF, Cargo, Email})
         dgv_dados.Location = New Point(3, 46)
         dgv_dados.Name = "dgv_dados"
         dgv_dados.Size = New Size(532, 388)
         dgv_dados.TabIndex = 0
+        ' 
+        ' Id
+        ' 
+        Id.HeaderText = "Id"
+        Id.Name = "Id"
         ' 
         ' Nome
         ' 
@@ -376,6 +379,11 @@ Partial Class usuarios
         ' 
         Cargo.HeaderText = "Cargo"
         Cargo.Name = "Cargo"
+        ' 
+        ' Email
+        ' 
+        Email.HeaderText = "Email"
+        Email.Name = "Email"
         ' 
         ' ToolStrip1
         ' 
@@ -423,24 +431,6 @@ Partial Class usuarios
         ToolStripLabel2.Name = "ToolStripLabel2"
         ToolStripLabel2.Size = New Size(0, 37)
         ToolStripLabel2.Text = "                                       "
-        ' 
-        ' btn_visualizar
-        ' 
-        btn_visualizar.CustomizableEdges = CustomizableEdges1
-        btn_visualizar.DisabledState.BorderColor = Color.DarkGray
-        btn_visualizar.DisabledState.CustomBorderColor = Color.DarkGray
-        btn_visualizar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        btn_visualizar.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        btn_visualizar.FillColor = Color.White
-        btn_visualizar.Font = New Font("Segoe UI", 9F)
-        btn_visualizar.ForeColor = Color.White
-        btn_visualizar.Image = CType(resources.GetObject("btn_visualizar.Image"), Image)
-        btn_visualizar.ImageSize = New Size(17, 17)
-        btn_visualizar.Location = New Point(456, 342)
-        btn_visualizar.Name = "btn_visualizar"
-        btn_visualizar.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        btn_visualizar.Size = New Size(27, 19)
-        btn_visualizar.TabIndex = 28
         ' 
         ' usuarios
         ' 
@@ -495,11 +485,12 @@ Partial Class usuarios
     Friend WithEvents ToolStripLabel1 As ToolStripLabel
     Friend WithEvents ToolStripLabel2 As ToolStripLabel
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Nome As DataGridViewTextBoxColumn
-    Friend WithEvents CPF As DataGridViewTextBoxColumn
-    Friend WithEvents Cargo As DataGridViewTextBoxColumn
     Friend WithEvents user_cel As MaskedTextBox
     Friend WithEvents user_rg As MaskedTextBox
     Friend WithEvents user_cpf As MaskedTextBox
-    Friend WithEvents btn_visualizar As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Id As DataGridViewTextBoxColumn
+    Friend WithEvents Nome As DataGridViewTextBoxColumn
+    Friend WithEvents CPF As DataGridViewTextBoxColumn
+    Friend WithEvents Cargo As DataGridViewTextBoxColumn
+    Friend WithEvents Email As DataGridViewTextBoxColumn
 End Class

@@ -1,143 +1,168 @@
-﻿Public Class Estoque
-    Friend Class Produto
-        Public Property Nome As String
-        Public Property Preco As Decimal
-        Public Property Quantidade As Integer
-        Public Property Descricao As String
-        Public Property Categoria As String
-    End Class
+﻿Imports MySql.Data.MySqlClient
 
-    Private produtos As New List(Of Produto)()
-    Private editIndex As Integer = -1
-    Private colunasCriadas As Boolean = False
-
+Public Class Estoque
+    Dim conexao As MySqlConnection
+    Dim idSelecionado As Integer = -1
 
     Private Sub Estoque_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AtualizarGrid()
+        ConectaBanco()
+        CarregarEstoque(db)
+        ConfigurarDataGridView(Guna2DataGridView1)
     End Sub
 
+    Private Sub CarregarEstoque(conexao As MySqlConnection)
+        If conexao.State <> ConnectionState.Open Then
+            MsgBox("Erro ao conectar com o banco!", MsgBoxStyle.Critical)
+            Return
+        End If
 
-    Private Sub btn_entrar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
+        Dim sql As String = "SELECT id, nome, preco, quantidade, descricao, categoria FROM produtos"
+        Dim cmd As New MySqlCommand(sql, conexao)
+        Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+        Guna2DataGridView1.Columns.Clear()
+        Guna2DataGridView1.Rows.Clear()
+
+        ' Colunas
+        Guna2DataGridView1.Columns.Add("id", "ID")
+        Guna2DataGridView1.Columns("id").Visible = False
+        Guna2DataGridView1.Columns.Add("nome", "Nome")
+        Guna2DataGridView1.Columns.Add("preco", "Preço")
+        Guna2DataGridView1.Columns.Add("quantidade", "Quantidade")
+        Guna2DataGridView1.Columns.Add("descricao", "Descrição")
+        Guna2DataGridView1.Columns.Add("categoria", "Categoria")
+
+        ' Botões
+        Dim editarBtn As New DataGridViewButtonColumn With {.Name = "editar", .HeaderText = "Editar", .Text = "✏️", .UseColumnTextForButtonValue = True}
+        Dim excluirBtn As New DataGridViewButtonColumn With {.Name = "excluir", .HeaderText = "Excluir", .Text = "❌", .UseColumnTextForButtonValue = True}
+        Guna2DataGridView1.Columns.Add(editarBtn)
+        Guna2DataGridView1.Columns.Add(excluirBtn)
+
+        While reader.Read()
+            Guna2DataGridView1.Rows.Add(
+                reader("id"),
+                reader("nome"),
+                FormatNumber(reader("preco"), 2),
+                reader("quantidade"),
+                reader("descricao").ToString(),
+                reader("categoria")
+            )
+        End While
+
+        reader.Close()
+    End Sub
+
+    Private Sub btn_salvar_Click(sender As Object, e As EventArgs) Handles btn_salvar.Click
         Dim nome = user_nome.Text.Trim()
-        Dim preco As Decimal
-        Dim quantidade As Integer
         Dim descricao = TextBox1.Text.Trim()
         Dim categoria = TextBox3.Text.Trim()
+        Dim preco As Decimal
+        Dim quantidade As Integer
 
         If Not Decimal.TryParse(TextBox2.Text, preco) Then
-            MessageBox.Show("Preço inválido.")
+            MsgBox("Preço inválido.")
             Return
         End If
+
         If Not Integer.TryParse(TextBox4.Text, quantidade) Then
-            MessageBox.Show("Quantidade inválida.")
-            Return
-        End If
-        If nome = "" Or descricao = "" Or categoria = "" Then
-            MessageBox.Show("Preencha todos os campos.")
+            MsgBox("Quantidade inválida.")
             Return
         End If
 
-        If editIndex = -1 Then
+        If nome = "" Or categoria = "" Then
+            MsgBox("Preencha os campos obrigatórios (nome e categoria).")
+            Return
+        End If
 
-            produtos.Add(New Produto With {
-                .Nome = nome,
-                .Preco = preco,
-                .Quantidade = quantidade,
-                .Descricao = descricao,
-                .Categoria = categoria
-            })
+        Dim cmd As MySqlCommand
+
+        If idSelecionado = -1 Then
+            ' Inserir novo
+            Dim sqlInsert = "INSERT INTO produtos(nome, preco, quantidade, descricao, categoria) VALUES (@nome, @preco, @quantidade, @descricao, @categoria)"
+            cmd = New MySqlCommand(sqlInsert, db)
         Else
-
-            If editIndex >= 0 AndAlso editIndex < produtos.Count Then
-                produtos(editIndex).Nome = nome
-                produtos(editIndex).Preco = preco
-                produtos(editIndex).Quantidade = quantidade
-                produtos(editIndex).Descricao = descricao
-                produtos(editIndex).Categoria = categoria
-            End If
-            editIndex = -1
-            btn_salvar.Text = "Cadastrar"
+            ' Atualizar existente
+            Dim sqlUpdate = "UPDATE produtos SET nome=@nome, preco=@preco, quantidade=@quantidade, descricao=@descricao, categoria=@categoria WHERE id=@id"
+            cmd = New MySqlCommand(sqlUpdate, db)
+            cmd.Parameters.AddWithValue("@id", idSelecionado)
         End If
+
+        cmd.Parameters.AddWithValue("@nome", nome)
+        cmd.Parameters.AddWithValue("@preco", preco)
+        cmd.Parameters.AddWithValue("@quantidade", quantidade)
+        cmd.Parameters.AddWithValue("@descricao", descricao)
+        cmd.Parameters.AddWithValue("@categoria", categoria)
+
+        cmd.ExecuteNonQuery()
+        MsgBox("Produto salvo com sucesso!", MsgBoxStyle.Information)
 
         LimparCampos()
-        AtualizarGrid()
+        CarregarEstoque(db)
     End Sub
-
-
-    Private Sub AtualizarGrid()
-        If Not colunasCriadas Then
-            Guna2DataGridView1.Columns.Clear()
-            Guna2DataGridView1.Columns.Add("Nome", "Nome")
-            Guna2DataGridView1.Columns.Add("Preco", "Preço")
-            Guna2DataGridView1.Columns.Add("Quantidade", "Quantidade")
-            Guna2DataGridView1.Columns.Add("Descricao", "Descrição")
-            Guna2DataGridView1.Columns.Add("Categoria", "Categoria")
-
-            Dim editarBtn As New DataGridViewButtonColumn With {
-                .Name = "Editar",
-                .HeaderText = "Editar",
-                .Text = "Editar",
-                .UseColumnTextForButtonValue = True
-            }
-            Guna2DataGridView1.Columns.Add(editarBtn)
-
-            Dim excluirBtn As New DataGridViewButtonColumn With {
-                .Name = "Excluir",
-                .HeaderText = "Excluir",
-                .Text = "Excluir",
-                .UseColumnTextForButtonValue = True
-            }
-            Guna2DataGridView1.Columns.Add(excluirBtn)
-
-            colunasCriadas = True
-        End If
-
-
-        Guna2DataGridView1.Rows.Clear()
-        For Each p In produtos
-            Guna2DataGridView1.Rows.Add(p.Nome, p.Preco.ToString("F2"), p.Quantidade.ToString(), p.Descricao, p.Categoria)
-        Next
-    End Sub
-
 
     Private Sub Guna2DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Guna2DataGridView1.CellContentClick
-        If e.RowIndex < 0 OrElse e.RowIndex >= produtos.Count Then Return
+        If e.RowIndex < 0 Then Exit Sub
 
-        If Guna2DataGridView1.Columns(e.ColumnIndex).Name = "Editar" Then
+        Dim id As Integer = CInt(Guna2DataGridView1.Rows(e.RowIndex).Cells("id").Value)
 
-            editIndex = e.RowIndex
-            Dim p = produtos(editIndex)
-            user_nome.Text = p.Nome
-            TextBox2.Text = p.Preco.ToString()
-            TextBox4.Text = p.Quantidade.ToString()
-            TextBox1.Text = p.Descricao
-            TextBox3.Text = p.Categoria
-            btn_salvar.Text = "Salvar"
+        If Guna2DataGridView1.Columns(e.ColumnIndex).Name = "editar" Then
+            ' Carregar dados no formulário
+            Dim sql As String = "SELECT * FROM produtos WHERE id = @id"
+            Dim cmd As New MySqlCommand(sql, db)
+            cmd.Parameters.AddWithValue("@id", id)
+            Dim reader = cmd.ExecuteReader()
 
-        ElseIf Guna2DataGridView1.Columns(e.ColumnIndex).Name = "Excluir" Then
+            If reader.Read() Then
+                idSelecionado = reader("id")
+                user_nome.Text = reader("nome").ToString()
+                TextBox2.Text = reader("preco").ToString()
+                TextBox4.Text = reader("quantidade").ToString()
+                TextBox1.Text = reader("descricao").ToString()
+                TextBox3.Text = reader("categoria").ToString()
+                btn_salvar.Text = "Atualizar"
+            End If
+            reader.Close()
 
-            If MessageBox.Show("Deseja excluir este produto?", "Confirmação", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                produtos.RemoveAt(e.RowIndex)
-                AtualizarGrid()
+        ElseIf Guna2DataGridView1.Columns(e.ColumnIndex).Name = "excluir" Then
+            If MsgBox("Deseja excluir este produto?", MsgBoxStyle.YesNo + MsgBoxStyle.Question) = MsgBoxResult.Yes Then
+                Dim sqlDel As String = "DELETE FROM produtos WHERE id = @id"
+                Dim cmd As New MySqlCommand(sqlDel, db)
+                cmd.Parameters.AddWithValue("@id", id)
+                cmd.ExecuteNonQuery()
+                MsgBox("Produto excluído com sucesso!", MsgBoxStyle.Information)
+                CarregarEstoque(db)
                 LimparCampos()
             End If
         End If
     End Sub
 
-
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
-        LimparCampos
-    End Sub
-
-
     Private Sub LimparCampos()
-        user_nome.Text = ""
-        TextBox2.Text = ""
-        TextBox4.Text = ""
-        TextBox1.Text = ""
-        TextBox3.Text = ""
-        editIndex = -1
+        user_nome.Clear()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
         btn_salvar.Text = "Cadastrar"
+        idSelecionado = -1
         user_nome.Focus()
     End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+        Select Case CargoUsuario
+            Case "administrador"
+                Dim f As New menu_admin()
+                f.Show()
+            Case "recepcionista"
+                Dim f As New menu_rec()
+                f.Show()
+            Case "auxiliar de serviços gerais"
+                Dim f As New menu_sg()
+                f.Show()
+            Case Else
+                MessageBox.Show("Cargo do usuário não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Select
+
+        Me.Close()
+    End Sub
 End Class
+

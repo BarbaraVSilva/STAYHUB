@@ -9,6 +9,8 @@ Public Class financeiro
         CriarTabelasSeNecessario()
         CarregarDadosEntrada()
         CarregarDadosSaida()
+        ConfigurarDataGridView(dgvEntrada)
+        ConfigurarDataGridView(dgvSaida)
     End Sub
 
     ' CRIAÇÃO DAS TABELAS
@@ -211,5 +213,28 @@ Public Class financeiro
 
     Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
 
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+
+    End Sub
+
+    Private Sub Guna2Button3_Click(sender As Object, e As EventArgs) Handles Guna2Button3.Click
+
+        Select Case CargoUsuario
+            Case "administrador"
+                Dim f As New menu_admin()
+                f.Show()
+            Case "recepcionista"
+                Dim f As New menu_rec()
+                f.Show()
+            Case "auxiliar de serviços gerais"
+                Dim f As New menu_sg() ' Substitua por menu_servicos se quiser outro menu
+                f.Show()
+            Case Else
+                MessageBox.Show("Cargo do usuário não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Select
+
+        Me.Close()
     End Sub
 End Class

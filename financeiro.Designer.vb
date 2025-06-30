@@ -18,11 +18,12 @@ Partial Class financeiro
 
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(financeiro))
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         ENTRADAS = New TabControl()
         TabEntrada = New TabPage()
+        cmbFormaPagamento = New ComboBox()
         btnLimparEntrada = New Button()
         dgvEntrada = New DataGridView()
         lblDataEntrada = New Label()
@@ -34,7 +35,6 @@ Partial Class financeiro
         lblValorEntrada = New Label()
         txtValorEntrada = New TextBox()
         lblFormaPagamento = New Label()
-        cmbFormaPagamento = New ComboBox()
         btnSalvarEntrada = New Button()
         lblPesquisaEntrada = New Label()
         dtpPesquisaEntrada = New DateTimePicker()
@@ -104,9 +104,17 @@ Partial Class financeiro
         TabEntrada.TabIndex = 0
         TabEntrada.Text = "ENTRADAS"
         ' 
+        ' cmbFormaPagamento
+        ' 
+        cmbFormaPagamento.Items.AddRange(New Object() {"PIX", "Dinheiro", "Cartão de Crédito", "Cartão de Débito"})
+        cmbFormaPagamento.Location = New Point(130, 148)
+        cmbFormaPagamento.Name = "cmbFormaPagamento"
+        cmbFormaPagamento.Size = New Size(200, 23)
+        cmbFormaPagamento.TabIndex = 10
+        ' 
         ' btnLimparEntrada
         ' 
-        btnLimparEntrada.BackColor = Color.White
+        btnLimparEntrada.BackColor = Color.Gainsboro
         btnLimparEntrada.Location = New Point(472, 148)
         btnLimparEntrada.Name = "btnLimparEntrada"
         btnLimparEntrada.Size = New Size(108, 30)
@@ -192,16 +200,9 @@ Partial Class financeiro
         lblFormaPagamento.TabIndex = 9
         lblFormaPagamento.Text = "Forma de Pagamento:"
         ' 
-        ' cmbFormaPagamento
-        ' 
-        cmbFormaPagamento.Location = New Point(130, 148)
-        cmbFormaPagamento.Name = "cmbFormaPagamento"
-        cmbFormaPagamento.Size = New Size(200, 23)
-        cmbFormaPagamento.TabIndex = 10
-        ' 
         ' btnSalvarEntrada
         ' 
-        btnSalvarEntrada.BackColor = Color.White
+        btnSalvarEntrada.BackColor = Color.Gainsboro
         btnSalvarEntrada.Location = New Point(353, 148)
         btnSalvarEntrada.Name = "btnSalvarEntrada"
         btnSalvarEntrada.Size = New Size(108, 30)
@@ -226,8 +227,8 @@ Partial Class financeiro
         ' 
         ' btnPesquisarEntrada
         ' 
-        btnPesquisarEntrada.BackColor = Color.White
-        btnPesquisarEntrada.Location = New Point(366, 200)
+        btnPesquisarEntrada.BackColor = Color.Gainsboro
+        btnPesquisarEntrada.Location = New Point(353, 198)
         btnPesquisarEntrada.Name = "btnPesquisarEntrada"
         btnPesquisarEntrada.Size = New Size(108, 30)
         btnPesquisarEntrada.TabIndex = 14
@@ -256,7 +257,7 @@ Partial Class financeiro
         ' 
         ' btnLimparSaida
         ' 
-        btnLimparSaida.BackColor = Color.White
+        btnLimparSaida.BackColor = Color.Gainsboro
         btnLimparSaida.Location = New Point(471, 116)
         btnLimparSaida.Name = "btnLimparSaida"
         btnLimparSaida.Size = New Size(108, 30)
@@ -364,7 +365,7 @@ Partial Class financeiro
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges3
+        Guna2Button3.CustomizableEdges = CustomizableEdges1
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -376,7 +377,7 @@ Partial Class financeiro
         Guna2Button3.ImageSize = New Size(80, 80)
         Guna2Button3.Location = New Point(10, 3)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button3.Size = New Size(117, 39)
         Guna2Button3.TabIndex = 35
         ' 

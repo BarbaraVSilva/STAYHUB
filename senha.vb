@@ -57,4 +57,9 @@ Public Class senha
         End If
         senhaVisivel = Not senhaVisivel
     End Sub
+
+    Private Sub btn_cancelar_Click(sender As Object, e As EventArgs) Handles btn_cancelar.Click
+        login.Show()
+        Me.Close()
+    End Sub
 End Class

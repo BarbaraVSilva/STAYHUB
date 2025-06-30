@@ -7,6 +7,7 @@ Public Class usuarios
         CarregarCargos()
         ConectaBanco()
         CarregarUsuario(db)
+        ConfigurarDataGridView(dgv_dados)
     End Sub
 
     Private Sub CarregarUsuario(conexao As MySqlConnection)
@@ -20,7 +21,7 @@ Public Class usuarios
         Dim leitor As MySqlDataReader = comando.ExecuteReader()
 
         dgv_dados.Rows.Clear()
-        If dgv_dados.Columns.Count < 5 Then
+        If dgv_dados.Columns.Count < 6 Then
             Dim editarColuna As New DataGridViewButtonColumn()
             editarColuna.Name = "editar"
             editarColuna.HeaderText = "Editar"
@@ -41,14 +42,14 @@ Public Class usuarios
 
         While leitor.Read()
             cont += 1
-            dgv_dados.Rows.Add(cont, leitor("nome"), leitor("cpf"))
+            dgv_dados.Rows.Add(cont, leitor("nome"), leitor("cpf"), leitor("data_nascimento"))
         End While
 
         leitor.Close()
     End Sub
 
     Private Sub LimparCampos()
-        Module1.LimparCadastro() ' Chama o método do módulo para limpar os campos
+        Module1.LimparCadastro()
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
@@ -58,19 +59,19 @@ Public Class usuarios
                 Return
             End If
 
-            Dim sqlBusca As String = "SELECT * FROM usuarios WHERE cpf = @cpf"
-            Dim comando As New MySqlCommand(sqlBusca, db)
-            comando.Parameters.AddWithValue("@cpf", user_cpf.Text)
-            Dim leitor As MySqlDataReader = comando.ExecuteReader()
+            Dim usuarioExiste As Boolean = False
+            Using cmdBusca As New MySqlCommand("SELECT 1 FROM usuarios WHERE cpf = @cpf", db)
+                cmdBusca.Parameters.AddWithValue("@cpf", user_cpf.Text)
+                Using reader As MySqlDataReader = cmdBusca.ExecuteReader()
+                    usuarioExiste = reader.HasRows
+                End Using
+            End Using
 
-            If leitor.HasRows Then
-                leitor.Close()
-                Dim sqlAtualiza As String = "UPDATE usuarios SET nome=@nome, data_nascimento=@data, email=@email, rg=@rg, endereco=@endereco, complemento=@complemento, celular=@celular, cargo=@cargo, senha=@senha WHERE cpf=@cpf"
-                comando = New MySqlCommand(sqlAtualiza, db)
+            Dim comando As MySqlCommand
+            If usuarioExiste Then
+                comando = New MySqlCommand("UPDATE usuarios SET nome=@nome, data_nascimento=@data, email=@email, rg=@rg, endereco=@endereco, complemento=@complemento, celular=@celular, cargo=@cargo, senha=@senha WHERE cpf=@cpf", db)
             Else
-                leitor.Close()
-                Dim sqlInsere As String = "INSERT INTO usuarios (cpf, nome, data_nascimento, email, rg, endereco, complemento, celular, cargo, senha) VALUES (@cpf, @nome, @data, @email, @rg, @endereco, @complemento, @celular, @cargo, @senha)"
-                comando = New MySqlCommand(sqlInsere, db)
+                comando = New MySqlCommand("INSERT INTO usuarios (cpf, nome, data_nascimento, email, rg, endereco, complemento, celular, cargo, senha) VALUES (@cpf, @nome, @data, @email, @rg, @endereco, @complemento, @celular, @cargo, @senha)", db)
             End If
 
             ' Parâmetros comuns
@@ -86,8 +87,8 @@ Public Class usuarios
             comando.Parameters.AddWithValue("@senha", user_senha.Text)
 
             comando.ExecuteNonQuery()
-            MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information)
 
+            MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information)
             CarregarUsuario(db)
             LimparCampos()
 
@@ -108,7 +109,7 @@ Public Class usuarios
 
     Private Sub dgv_dados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_dados.CellContentClick
         If e.RowIndex >= 0 Then
-            Dim cpfSelecionado As String = dgv_dados.Rows(e.RowIndex).Cells(2).Value.ToString()
+            Dim cpfSelecionado As String = dgv_dados.Rows(e.RowIndex).Cells("cpf").Value.ToString()
 
             ' EDITAR
             If dgv_dados.Columns(e.ColumnIndex).Name = "editar" Then
@@ -141,15 +142,21 @@ Public Class usuarios
         End If
     End Sub
 
-    Private senhaVisivel As Boolean = False
-    Private Sub btn_visualizar_Click(sender As Object, e As EventArgs) Handles btn_visualizar.Click
-        If senhaVisivel Then
-            user_senha.UseSystemPasswordChar = True
-            btn_visualizar.Text = "👁️"
-        Else
-            user_senha.UseSystemPasswordChar = False
-            btn_visualizar.Text = "🙈"
-        End If
-        senhaVisivel = Not senhaVisivel
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        Select Case CargoUsuario
+            Case "administrador"
+                Dim f As New menu_admin()
+                f.Show()
+            Case "recepcionista"
+                Dim f As New menu_rec()
+                f.Show()
+            Case "auxiliar de serviços gerais"
+                Dim f As New menu_sg()
+                f.Show()
+            Case Else
+                MessageBox.Show("Cargo do usuário não reconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Select
+
+        Me.Close()
     End Sub
 End Class

@@ -20,18 +20,18 @@ Partial Class Serviços
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Serviços))
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label2 = New Label()
         txtName = New TextBox()
         Label3 = New Label()
         txtPrice = New TextBox()
         Label1 = New Label()
-        TextBox1 = New TextBox()
+        txtCategoria = New TextBox()
         Label4 = New Label()
-        dtgList = New DataGridView()
+        dtgServ = New DataGridView()
         ToolStrip1 = New ToolStrip()
         ToolStripButton1 = New ToolStripButton()
         ToolStripLabel2 = New ToolStripLabel()
@@ -39,7 +39,7 @@ Partial Class Serviços
         ToolStripLabel1 = New ToolStripLabel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         btn_salvar = New Guna.UI2.WinForms.Guna2Button()
-        CType(dtgList, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dtgServ, ComponentModel.ISupportInitialize).BeginInit()
         ToolStrip1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -84,12 +84,12 @@ Partial Class Serviços
         Label1.TabIndex = 3
         Label1.Text = "Categoria:"
         ' 
-        ' TextBox1
+        ' txtCategoria
         ' 
-        TextBox1.Location = New Point(90, 120)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(186, 23)
-        TextBox1.TabIndex = 3
+        txtCategoria.Location = New Point(90, 120)
+        txtCategoria.Name = "txtCategoria"
+        txtCategoria.Size = New Size(186, 23)
+        txtCategoria.TabIndex = 3
         ' 
         ' Label4
         ' 
@@ -102,14 +102,14 @@ Partial Class Serviços
         Label4.TabIndex = 4
         Label4.Text = "SERVIÇOS EXTRAS"
         ' 
-        ' dtgList
+        ' dtgServ
         ' 
-        dtgList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dtgList.Location = New Point(13, 151)
-        dtgList.Name = "dtgList"
-        dtgList.RowHeadersWidth = 51
-        dtgList.Size = New Size(532, 247)
-        dtgList.TabIndex = 5
+        dtgServ.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dtgServ.Location = New Point(13, 151)
+        dtgServ.Name = "dtgServ"
+        dtgServ.RowHeadersWidth = 51
+        dtgServ.Size = New Size(532, 247)
+        dtgServ.TabIndex = 5
         ' 
         ' ToolStrip1
         ' 
@@ -157,7 +157,7 @@ Partial Class Serviços
         ' Guna2Button1
         ' 
         Guna2Button1.BackColor = Color.WhiteSmoke
-        Guna2Button1.CustomizableEdges = CustomizableEdges1
+        Guna2Button1.CustomizableEdges = CustomizableEdges5
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -169,14 +169,14 @@ Partial Class Serviços
         Guna2Button1.ImageSize = New Size(80, 80)
         Guna2Button1.Location = New Point(9, 2)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Button1.Size = New Size(103, 39)
         Guna2Button1.TabIndex = 30
         ' 
         ' btn_salvar
         ' 
         btn_salvar.BorderRadius = 10
-        btn_salvar.CustomizableEdges = CustomizableEdges3
+        btn_salvar.CustomizableEdges = CustomizableEdges7
         btn_salvar.DisabledState.BorderColor = Color.DarkGray
         btn_salvar.DisabledState.CustomBorderColor = Color.DarkGray
         btn_salvar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -186,7 +186,7 @@ Partial Class Serviços
         btn_salvar.ForeColor = Color.White
         btn_salvar.Location = New Point(426, 107)
         btn_salvar.Name = "btn_salvar"
-        btn_salvar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btn_salvar.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btn_salvar.Size = New Size(114, 38)
         btn_salvar.TabIndex = 31
         btn_salvar.Text = "Salvar"
@@ -202,9 +202,9 @@ Partial Class Serviços
         Controls.Add(Guna2Button1)
         Controls.Add(Label4)
         Controls.Add(Label1)
-        Controls.Add(TextBox1)
+        Controls.Add(txtCategoria)
         Controls.Add(ToolStrip1)
-        Controls.Add(dtgList)
+        Controls.Add(dtgServ)
         Controls.Add(txtPrice)
         Controls.Add(Label3)
         Controls.Add(txtName)
@@ -216,7 +216,7 @@ Partial Class Serviços
         Name = "Serviços"
         StartPosition = FormStartPosition.CenterScreen
         Text = "STAYHUB"
-        CType(dtgList, ComponentModel.ISupportInitialize).EndInit()
+        CType(dtgServ, ComponentModel.ISupportInitialize).EndInit()
         ToolStrip1.ResumeLayout(False)
         ToolStrip1.PerformLayout()
         ResumeLayout(False)
@@ -228,9 +228,9 @@ Partial Class Serviços
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtPrice As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCategoria As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents dtgList As System.Windows.Forms.DataGridView
+    Friend WithEvents dtgServ As System.Windows.Forms.DataGridView
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel

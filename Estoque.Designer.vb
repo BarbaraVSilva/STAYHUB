@@ -22,14 +22,11 @@ Partial Class Estoque
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Estoque))
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         ToolStrip1 = New ToolStrip()
         ToolStripButton2 = New ToolStripButton()
@@ -48,7 +45,7 @@ Partial Class Estoque
         TextBox3 = New TextBox()
         Label6 = New Label()
         TextBox4 = New TextBox()
-        Guna2DataGridView1 = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2DataGridView1 = New DataGridView()
         ToolStrip1.SuspendLayout()
         CType(Guna2DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -56,7 +53,7 @@ Partial Class Estoque
         ' Guna2Button3
         ' 
         Guna2Button3.BackColor = Color.WhiteSmoke
-        Guna2Button3.CustomizableEdges = CustomizableEdges13
+        Guna2Button3.CustomizableEdges = CustomizableEdges1
         Guna2Button3.DisabledState.BorderColor = Color.DarkGray
         Guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button3.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -68,7 +65,7 @@ Partial Class Estoque
         Guna2Button3.ImageSize = New Size(80, 80)
         Guna2Button3.Location = New Point(12, 4)
         Guna2Button3.Name = "Guna2Button3"
-        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button3.Size = New Size(103, 39)
         Guna2Button3.TabIndex = 28
         ' 
@@ -81,7 +78,7 @@ Partial Class Estoque
         ToolStrip1.Items.AddRange(New ToolStripItem() {ToolStripButton2, ToolStripTextBox1, ToolStripLabel1, ToolStripLabel2})
         ToolStrip1.Location = New Point(0, -1)
         ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(688, 44)
+        ToolStrip1.Size = New Size(659, 44)
         ToolStrip1.TabIndex = 27
         ToolStrip1.Text = "ToolStrip1"
         ' 
@@ -122,7 +119,7 @@ Partial Class Estoque
         ' btn_salvar
         ' 
         btn_salvar.BorderRadius = 10
-        btn_salvar.CustomizableEdges = CustomizableEdges15
+        btn_salvar.CustomizableEdges = CustomizableEdges3
         btn_salvar.DisabledState.BorderColor = Color.DarkGray
         btn_salvar.DisabledState.CustomBorderColor = Color.DarkGray
         btn_salvar.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -132,10 +129,10 @@ Partial Class Estoque
         btn_salvar.ForeColor = Color.White
         btn_salvar.Location = New Point(456, 112)
         btn_salvar.Name = "btn_salvar"
-        btn_salvar.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        btn_salvar.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btn_salvar.Size = New Size(190, 38)
         btn_salvar.TabIndex = 29
-        btn_salvar.Text = "Cadastrar"
+        btn_salvar.Text = "Salvar"
         btn_salvar.Tile = True
         ' 
         ' Label1
@@ -160,7 +157,7 @@ Partial Class Estoque
         Label3.BackColor = Color.WhiteSmoke
         Label3.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.DarkBlue
-        Label3.Location = New Point(146, 13)
+        Label3.Location = New Point(119, 13)
         Label3.Name = "Label3"
         Label3.Size = New Size(66, 17)
         Label3.TabIndex = 33
@@ -232,59 +229,17 @@ Partial Class Estoque
         ' 
         ' Guna2DataGridView1
         ' 
-        DataGridViewCellStyle10.BackColor = Color.White
-        Guna2DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle10
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle11.ForeColor = Color.White
-        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        Guna2DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
-        Guna2DataGridView1.ColumnHeadersHeight = 4
-        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = Color.White
-        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        DataGridViewCellStyle12.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        Guna2DataGridView1.DefaultCellStyle = DataGridViewCellStyle12
-        Guna2DataGridView1.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.Location = New Point(23, 173)
+        Guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Guna2DataGridView1.Location = New Point(9, 164)
         Guna2DataGridView1.Name = "Guna2DataGridView1"
-        Guna2DataGridView1.RowHeadersVisible = False
-        Guna2DataGridView1.Size = New Size(623, 264)
+        Guna2DataGridView1.Size = New Size(640, 295)
         Guna2DataGridView1.TabIndex = 42
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = Nothing
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
-        Guna2DataGridView1.ThemeStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
-        Guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4
-        Guna2DataGridView1.ThemeStyle.ReadOnly = False
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White
-        Guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
-        Guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        Guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' Estoque
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(689, 465)
+        ClientSize = New Size(659, 465)
         Controls.Add(Guna2DataGridView1)
         Controls.Add(Label6)
         Controls.Add(TextBox4)
@@ -327,5 +282,5 @@ Partial Class Estoque
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Guna2DataGridView1 As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2DataGridView1 As DataGridView
 End Class

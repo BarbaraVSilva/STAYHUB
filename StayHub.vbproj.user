@@ -34,9 +34,6 @@
     <Compile Update="reservas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="reservas_lista.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="serviços.vb">
       <SubType>Form</SubType>
     </Compile>
